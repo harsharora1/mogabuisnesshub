@@ -25,11 +25,12 @@
             padding: 0;
             box-sizing: border-box;
             font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            /* Prevent text selection */
+            /* Prevent text selection and blue highlight */
             -webkit-user-select: none;
             -moz-user-select: none;
             -ms-user-select: none;
             user-select: none;
+            -webkit-tap-highlight-color: transparent;
         }
         
         /* Allow text selection only for specific elements */
@@ -38,6 +39,13 @@
             -moz-user-select: text;
             -ms-user-select: text;
             user-select: text;
+        }
+        
+        /* Prevent blue highlight on buttons and interactive elements */
+        button, a, .cta-button, .whatsapp-button, .phone-button, .service-card, .step, 
+        .benefit-card, .business-card, .creative-card, .service-area-card {
+            -webkit-tap-highlight-color: transparent;
+            outline: none;
         }
         
         body {
@@ -180,22 +188,84 @@
             background: var(--gradient-accent);
             color: white;
             border: none;
-            padding: 0.5rem 0.8rem;
+            padding: 0.7rem 1.4rem;
             border-radius: 50px;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
             text-decoration: none;
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
             box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
-            font-size: 0.75rem;
+            font-size: 0.85rem;
             white-space: nowrap;
-            flex-shrink: 0;
+            line-height: 1;
         }
         
         .cta-button:hover {
             transform: translateY(-3px);
             box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
+        }
+        
+        /* FIXED PHONE BUTTON STYLES */
+        .phone-button {
+            background: var(--gradient);
+            color: white;
+            border: none;
+            padding: 0.7rem 1.4rem;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            box-shadow: 0 4px 15px rgba(157, 0, 255, 0.3);
+            font-size: 0.85rem;
+            white-space: nowrap;
+            line-height: 1;
+        }
+        
+        .phone-button:hover {
+            background: var(--secondary);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(157, 0, 255, 0.4);
+        }
+        
+        .phone-button i {
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .whatsapp-button {
+            background-color: #25D366;
+            color: white;
+            border: none;
+            padding: 0.7rem 1.4rem;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+            font-size: 0.85rem;
+            line-height: 1;
+        }
+        
+        .whatsapp-button:hover {
+            background-color: #128C7E;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
         }
         
         /* Tablet and Desktop Styles */
@@ -263,8 +333,8 @@
                 display: none;
             }
             
-            .cta-button {
-                padding: 0.7rem 1.5rem;
+            .cta-button, .phone-button, .whatsapp-button {
+                padding: 0.8rem 1.8rem;
                 font-size: 1rem;
             }
         }
@@ -279,13 +349,14 @@
         @media (max-width: 767px) {
             /* Remove hover effects on mobile and replace with active states */
             .service-card, .step, .benefit-card, .business-card, .creative-card,
-            .stat-item, .contact-item, .footer-links li {
+            .stat-item, .contact-item, .footer-links li, .service-area-card {
                 transition: none;
             }
             
             .service-card:active, .step:active, .benefit-card:active, 
             .business-card:active, .creative-card:active,
-            .stat-item:active, .contact-item:active, .footer-links li:active {
+            .stat-item:active, .contact-item:active, .footer-links li:active,
+            .service-area-card:active {
                 transform: translateY(-5px);
             }
             
@@ -297,7 +368,7 @@
             }
             
             /* Improve button active states */
-            .cta-button:active, .whatsapp-button:active {
+            .cta-button:active, .whatsapp-button:active, .phone-button:active {
                 transform: translateY(-3px);
             }
         }
@@ -348,29 +419,6 @@
             margin-bottom: 1.5rem;
         }
         
-        .whatsapp-button {
-            background-color: #25D366;
-            color: white;
-            border: none;
-            padding: 0.7rem 1.4rem; /* Slightly increased padding */
-            border-radius: 50px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
-            font-size: 0.85rem; /* Slightly increased font size */
-        }
-        
-        .whatsapp-button:hover {
-            background-color: #128C7E;
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
-        }
-        
         .stats {
             display: flex;
             justify-content: center;
@@ -399,6 +447,158 @@
         .stat-label {
             font-size: 0.75rem;
             color: var(--darker-text);
+        }
+        
+        /* NEW SERVICE AREA SECTION */
+        .service-area {
+            padding: 3rem 0;
+            background: var(--dark-bg);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .service-area::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 30% 20%, rgba(157, 0, 255, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 80%, rgba(255, 107, 53, 0.1) 0%, transparent 50%);
+            z-index: 0;
+        }
+        
+        .service-area-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+        
+        .service-area h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+        
+        .service-area-highlight {
+            color: var(--highlight);
+            font-weight: 700;
+            font-size: 1.4rem;
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+        
+        .service-area-subtitle {
+            font-size: 1.1rem;
+            color: var(--darker-text);
+            margin-bottom: 2rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .service-area-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .service-area-card {
+            background: var(--dark-card);
+            border-radius: 12px;
+            padding: 2rem 1.5rem;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(157, 0, 255, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .service-area-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--gradient);
+        }
+        
+        .service-area-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+            border-color: var(--primary);
+        }
+        
+        .area-icon {
+            width: 70px;
+            height: 70px;
+            background: var(--gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            color: white;
+            font-size: 1.8rem;
+            transition: all 0.3s ease;
+        }
+        
+        .service-area-card:hover .area-icon {
+            transform: scale(1.1);
+            background: var(--gradient-accent);
+        }
+        
+        .service-area-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+        
+        .service-area-card p {
+            color: var(--darker-text);
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+        }
+        
+        .punjab-highlight {
+            color: var(--highlight);
+            font-weight: 600;
+        }
+        
+        .cities-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 1.5rem;
+        }
+        
+        .city-tag {
+            background: rgba(157, 0, 255, 0.2);
+            color: var(--primary);
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            border: 1px solid rgba(157, 0, 255, 0.3);
+        }
+        
+        @media (min-width: 768px) {
+            .service-area-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            .service-area h2 {
+                font-size: 2.2rem;
+            }
+            
+            .service-area-highlight {
+                font-size: 1.6rem;
+            }
         }
         
         /* Services Section - Mobile First */
@@ -919,6 +1119,7 @@
                 </button>
                 <ul class="nav-links" id="navLinks">
                     <li><a href="#home">Home</a></li>
+                    <li><a href="#service-area">Service Area</a></li>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#benefits">Benefits</a></li>
                     <li><a href="#creative">Creative Content</a></li>
@@ -941,8 +1142,8 @@
                     <a href="https://chat.whatsapp.com/your-group-link" class="whatsapp-button" target="_blank">
                         <i class="fab fa-whatsapp"></i> Join Our Group
                     </a>
-                    <a href="https://wa.me/917973890562" class="cta-button" target="_blank">
-                        <i class="fas fa-phone-alt"></i> Call: 7973890562
+                    <a href="https://wa.me/917973890562" class="phone-button" target="_blank">
+                        <i class="fas fa-phone"></i> Call: 7973890562
                     </a>
                     <a href="https://wa.me/917973890562?text=Hi,%20I%20want%20to%20join%20MBA%20services" class="cta-button" target="_blank">
                         <i class="fas fa-rocket"></i> Join Now
@@ -962,6 +1163,55 @@
                         <div class="stat-number">₹2,999</div>
                         <div class="stat-label">Website Price</div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW SERVICE AREA SECTION -->
+    <section class="service-area" id="service-area">
+        <div class="container">
+            <div class="service-area-content">
+                <h2>Hamari Service Area</h2>
+                <span class="service-area-highlight">Serving All of Punjab, Starting with Moga!</span>
+                <p class="service-area-subtitle">MBA is specially designed for small cities and local businesses across <span class="punjab-highlight">Punjab</span> who can't afford expensive marketing agencies. We bring affordable digital solutions to your doorstep.</p>
+                
+                <div class="service-area-grid">
+                    <div class="service-area-card">
+                        <div class="area-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3>Starting from Moga</h3>
+                        <p>We began our journey in Moga, Punjab, to help local businesses grow with affordable digital marketing solutions. Our success in Moga has inspired us to expand across Punjab.</p>
+                        <div class="cities-list">
+                            <span class="city-tag">Moga</span>
+                            <span class="city-tag">Ludhiana</span>
+                            <span class="city-tag">Jalandhar</span>
+                            <span class="city-tag">Amritsar</span>
+                        </div>
+                    </div>
+                    
+                    <div class="service-area-card">
+                        <div class="area-icon">
+                            <i class="fas fa-expand-arrows-alt"></i>
+                        </div>
+                        <h3>Expanding Across Punjab</h3>
+                        <p>While we started in Moga, our services are now available for businesses across <span class="punjab-highlight">all cities in Punjab</span>. Whether you're in a small town or a bigger city, we're here to help your business grow.</p>
+                        <div class="cities-list">
+                            <span class="city-tag">Bathinda</span>
+                            <span class="city-tag">Patiala</span>
+                            <span class="city-tag">Firozpur</span>
+                            <span class="city-tag">+ More</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 2.5rem;">
+                    <h3 style="color: var(--primary); margin-bottom: 1rem;">For All Punjab Businesses</h3>
+                    <p style="color: var(--darker-text); max-width: 800px; margin: 0 auto 1.5rem;">Big marketing agencies often ignore small cities and local businesses. <span class="hinglish">MBA aapke liye banaya gaya hai!</span> We understand the challenges faced by local businesses in Punjab and provide solutions that work for you.</p>
+                    <a href="https://wa.me/917973890562?text=Hi,%20I%20am%20from%20Punjab%20and%20want%20to%20promote%20my%20business" class="cta-button" target="_blank" style="padding: 0.8rem 2rem; font-size: 1rem;">
+                        <i class="fas fa-rocket"></i> Promote My Business
+                    </a>
                 </div>
             </div>
         </div>
@@ -1205,7 +1455,7 @@
                         
                         <div class="contact-item">
                             <div class="contact-icon">
-                                <i class="fas fa-phone-alt"></i>
+                                <i class="fas fa-phone"></i>
                             </div>
                             <div>
                                 <h4>Call Us</h4>
@@ -1255,6 +1505,7 @@
                     <h3>Quick Links</h3>
                     <ul class="footer-links">
                         <li><a href="#home">Home</a></li>
+                        <li><a href="#service-area">Service Area</a></li>
                         <li><a href="#services">Services</a></li>
                         <li><a href="#benefits">Benefits</a></li>
                         <li><a href="#creative">Creative Content</a></li>
@@ -1344,15 +1595,22 @@
         }, observerOptions);
         
         // Observe elements for animation
-        document.querySelectorAll('.service-card, .step, .benefit-card, .business-card, .creative-card').forEach(el => {
+        document.querySelectorAll('.service-card, .step, .benefit-card, .business-card, .creative-card, .service-area-card').forEach(el => {
             el.style.opacity = '0';
             el.style.transform = 'translateY(20px)';
             el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
             observer.observe(el);
         });
 
-        // Fix for mobile hover issues
+        // Fix for mobile hover issues and text selection
         document.addEventListener('touchstart', function() {}, {passive: true});
+        
+        // Prevent text selection on interactive elements
+        document.querySelectorAll('button, a, .cta-button, .whatsapp-button, .phone-button').forEach(el => {
+            el.addEventListener('selectstart', function(e) {
+                e.preventDefault();
+            });
+        });
     </script>
 </body>
 </html>
