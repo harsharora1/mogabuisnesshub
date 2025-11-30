@@ -64,11 +64,11 @@
             padding: 0 10px;
         }
         
-        /* IMPROVED HEADER STYLES */
+        /* IMPROVED HEADER STYLES - Reduced gaps */
         header {
             background: var(--dark-card);
             color: var(--dark-text);
-            padding: 0.8rem 0;
+            padding: 0.6rem 0; /* Reduced padding */
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -133,7 +133,7 @@
             line-height: 1;
         }
         
-        /* Improved navigation */
+        /* Improved navigation - Reduced gaps */
         .nav-links {
             display: none;
             position: absolute;
@@ -143,7 +143,7 @@
             background: var(--dark-card);
             flex-direction: column;
             text-align: center;
-            padding: 1rem 0;
+            padding: 0.8rem 0; /* Reduced padding */
             box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
             z-index: 1001;
         }
@@ -153,7 +153,7 @@
         }
         
         .nav-links li {
-            margin: 0.5rem 0;
+            margin: 0.3rem 0; /* Reduced margin */
             list-style: none;
         }
         
@@ -163,7 +163,7 @@
             font-weight: 500;
             transition: all 0.3s ease;
             display: block;
-            padding: 0.5rem 0;
+            padding: 0.4rem 0; /* Reduced padding */
             font-size: 0.9rem;
         }
         
@@ -183,7 +183,7 @@
             flex-shrink: 0;
         }
         
-        /* Improved CTA button */
+        /* IMPROVED CTA BUTTON - Better hover effect */
         .cta-button {
             background: var(--gradient-accent);
             color: white;
@@ -207,9 +207,10 @@
         .cta-button:hover {
             transform: translateY(-3px);
             box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
+            background: linear-gradient(135deg, #FF8E5C, #FF6B35);
         }
         
-        /* FIXED PHONE BUTTON STYLES */
+        /* IMPROVED PHONE BUTTON STYLES - Better hover effect */
         .phone-button {
             background: var(--gradient);
             color: white;
@@ -231,9 +232,9 @@
         }
         
         .phone-button:hover {
-            background: var(--secondary);
             transform: translateY(-3px);
             box-shadow: 0 6px 20px rgba(157, 0, 255, 0.4);
+            background: linear-gradient(135deg, #7A00CC, #9D00FF);
         }
         
         .phone-button i {
@@ -268,6 +269,144 @@
             box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
         }
         
+        /* NEW FEAR & SOLUTION SECTION - Added margin-top for spacing */
+        .fear-solution {
+            padding: 3rem 0;
+            background: var(--dark-bg);
+            position: relative;
+            overflow: hidden;
+            margin-top: 2rem; /* Added space between sections */
+        }
+        
+        .fear-solution::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 10% 20%, rgba(255, 107, 53, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 90% 80%, rgba(157, 0, 255, 0.1) 0%, transparent 50%);
+            z-index: 0;
+        }
+        
+        .fear-solution-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+        
+        .fear-solution h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+        
+        .fear-solution-subtitle {
+            font-size: 1.1rem;
+            color: var(--darker-text);
+            margin-bottom: 2rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .fear-solution-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .fear-card {
+            background: var(--dark-card);
+            border-radius: 12px;
+            padding: 2rem 1.5rem;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 107, 53, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .fear-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--gradient-accent);
+        }
+        
+        .fear-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+            border-color: var(--accent);
+        }
+        
+        .fear-icon {
+            width: 70px;
+            height: 70px;
+            background: var(--gradient-accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            color: white;
+            font-size: 1.8rem;
+            transition: all 0.3s ease;
+        }
+        
+        .fear-card:hover .fear-icon {
+            transform: scale(1.1);
+            background: var(--gradient);
+        }
+        
+        .fear-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--accent);
+        }
+        
+        .fear-card p {
+            color: var(--darker-text);
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+        }
+        
+        .solution-highlight {
+            background: rgba(157, 0, 255, 0.2);
+            padding: 1.2rem;
+            border-radius: 10px;
+            margin-top: 1rem;
+            border-left: 4px solid var(--primary);
+        }
+        
+        .solution-highlight h4 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+        
+        .solution-highlight p {
+            color: var(--dark-text);
+            margin-bottom: 0;
+            font-size: 0.95rem;
+        }
+        
+        @media (min-width: 768px) {
+            .fear-solution-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            .fear-solution h2 {
+                font-size: 2.2rem;
+            }
+        }
+        
         /* Tablet and Desktop Styles */
         @media (min-width: 768px) {
             .container {
@@ -276,7 +415,7 @@
             }
             
             header {
-                padding: 1rem 0;
+                padding: 0.8rem 0; /* Slightly reduced */
             }
             
             .logo {
@@ -317,7 +456,7 @@
                 background: transparent;
                 padding: 0;
                 box-shadow: none;
-                gap: 1.5rem;
+                gap: 1rem; /* Reduced gap */
             }
             
             .nav-links li {
@@ -326,7 +465,7 @@
             
             .nav-links a {
                 padding: 0;
-                font-size: 1rem;
+                font-size: 0.9rem; /* Slightly smaller */
             }
             
             .menu-toggle {
@@ -349,21 +488,22 @@
         @media (max-width: 767px) {
             /* Remove hover effects on mobile and replace with active states */
             .service-card, .step, .benefit-card, .business-card, .creative-card,
-            .stat-item, .contact-item, .footer-links li, .service-area-card {
+            .stat-item, .contact-item, .footer-links li, .service-area-card, .fear-card {
                 transition: none;
             }
             
             .service-card:active, .step:active, .benefit-card:active, 
             .business-card:active, .creative-card:active,
             .stat-item:active, .contact-item:active, .footer-links li:active,
-            .service-area-card:active {
+            .service-area-card:active, .fear-card:active {
                 transform: translateY(-5px);
             }
             
             .service-card:active .service-icon, 
             .benefit-card:active .benefit-icon,
             .business-card:active .business-icon,
-            .creative-card:active .creative-icon {
+            .creative-card:active .creative-icon,
+            .fear-card:active .fear-icon {
                 transform: scale(1.05);
             }
             
@@ -585,20 +725,6 @@
             font-size: 0.8rem;
             font-weight: 500;
             border: 1px solid rgba(157, 0, 255, 0.3);
-        }
-        
-        @media (min-width: 768px) {
-            .service-area-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-            
-            .service-area h2 {
-                font-size: 2.2rem;
-            }
-            
-            .service-area-highlight {
-                font-size: 1.6rem;
-            }
         }
         
         /* Services Section - Mobile First */
@@ -1004,7 +1130,7 @@
             transform: scale(1.05);
         }
         
-        /* Footer - Mobile First */
+        /* IMPROVED FOOTER - Better layout for all screens */
         footer {
             background-color: #0A0A0A;
             color: var(--dark-text);
@@ -1098,10 +1224,34 @@
             font-weight: 600;
             color: var(--highlight);
         }
+        
+        /* Improved footer layout for tablet and desktop */
+        @media (min-width: 768px) {
+            .footer-grid {
+                grid-template-columns: 2fr 1fr 1fr 1fr;
+                gap: 2rem;
+            }
+            
+            .footer-col:first-child {
+                grid-column: 1 / 2;
+            }
+            
+            .footer-col:nth-child(2) {
+                grid-column: 2 / 3;
+            }
+            
+            .footer-col:nth-child(3) {
+                grid-column: 3 / 4;
+            }
+            
+            .footer-col:nth-child(4) {
+                grid-column: 4 / 5;
+            }
+        }
     </style>
 </head>
 <body>
-    <!-- IMPROVED HEADER -->
+    <!-- IMPROVED HEADER - Reduced gaps -->
     <header>
         <div class="container">
             <nav class="navbar">
@@ -1120,6 +1270,7 @@
                 <ul class="nav-links" id="navLinks">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#service-area">Service Area</a></li>
+                    <li><a href="#fear-solution">Problem & Solution</a></li>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#benefits">Benefits</a></li>
                     <li><a href="#creative">Creative Content</a></li>
@@ -1145,7 +1296,7 @@
                     <a href="https://wa.me/917973890562" class="phone-button" target="_blank">
                         <i class="fas fa-phone"></i> Call: 7973890562
                     </a>
-                    <a href="https://wa.me/917973890562?text=Hi,%20I%20want%20to%20join%20MBA%20services" class="cta-button" target="_blank">
+                    <a href="https://wa.me/917973890562?text=Hello%20and%20welcome%20to%20Moga%20Business%20Hub!%20%F0%9F%91%8B%F0%9F%92%BC%F0%9F%8C%9F%0AWe%E2%80%99re%20excited%20to%20have%20you%20here.%20%F0%9F%98%8A%F0%9F%8C%9F%0AWhether%20you%20want%20to%20promote%20your%20business%20in%20our%20marketing%20group%20%F0%9F%93%A2%F0%9F%92%AC%20or%20need%20a%20professional%20website%20to%20grow%20online%20%F0%9F%8C%90%F0%9F%9A%80%2C%20we%E2%80%99re%20here%20to%20support%20you%20every%20step%20of%20the%20way.%20%F0%9F%A4%9D%E2%9D%A4%0AShare%20your%20message%20anytime%20%E2%80%94%20we%E2%80%99ll%20respond%20shortly%20with%20the%20best%20guidance.%20%F0%9F%93%B2%F0%9F%98%8A%F0%9F%8C%9F" class="cta-button" target="_blank">
                         <i class="fas fa-rocket"></i> Join Now
                     </a>
                 </div>
@@ -1209,8 +1360,80 @@
                 <div style="margin-top: 2.5rem;">
                     <h3 style="color: var(--primary); margin-bottom: 1rem;">For All Punjab Businesses</h3>
                     <p style="color: var(--darker-text); max-width: 800px; margin: 0 auto 1.5rem;">Big marketing agencies often ignore small cities and local businesses. <span class="hinglish">MBA aapke liye banaya gaya hai!</span> We understand the challenges faced by local businesses in Punjab and provide solutions that work for you.</p>
-                    <a href="https://wa.me/917973890562?text=Hi,%20I%20am%20from%20Punjab%20and%20want%20to%20promote%20my%20business" class="cta-button" target="_blank" style="padding: 0.8rem 2rem; font-size: 1rem;">
+                    <a href="https://wa.me/917973890562?text=Hello%20and%20welcome%20to%20Moga%20Business%20Hub!%20%F0%9F%91%8B%F0%9F%92%BC%F0%9F%8C%9F%0AWe%E2%80%99re%20excited%20to%20have%20you%20here.%20%F0%9F%98%8A%F0%9F%8C%9F%0AWhether%20you%20want%20to%20promote%20your%20business%20in%20our%20marketing%20group%20%F0%9F%93%A2%F0%9F%92%AC%20or%20need%20a%20professional%20website%20to%20grow%20online%20%F0%9F%8C%90%F0%9F%9A%80%2C%20we%E2%80%99re%20here%20to%20support%20you%20every%20step%20of%20the%20way.%20%F0%9F%A4%9D%E2%9D%A4%0AShare%20your%20message%20anytime%20%E2%80%94%20we%E2%80%99ll%20respond%20shortly%20with%20the%20best%20guidance.%20%F0%9F%93%B2%F0%9F%98%8A%F0%9F%8C%9F" class="cta-button" target="_blank" style="padding: 0.8rem 2rem; font-size: 1rem;">
                         <i class="fas fa-rocket"></i> Promote My Business
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW FEAR & SOLUTION SECTION -->
+    <section class="fear-solution" id="fear-solution">
+        <div class="container">
+            <div class="fear-solution-content">
+                <h2>Kyun Daren? MBA Hai Na!</h2>
+                <p class="fear-solution-subtitle">Local business owners face many challenges. <span class="hinglish">MBA aapki har problem ka solution hai!</span> Don't let these fears stop your business growth.</p>
+                
+                <div class="fear-solution-grid">
+                    <div class="fear-card">
+                        <div class="fear-icon">
+                            <i class="fas fa-users-slash"></i>
+                        </div>
+                        <h3>No New Customers Mile?</h3>
+                        <p>Your business is running, but new customers nahi aa rahe? <span class="hinglish">Same old customers se kaam chal raha hai?</span> This limits your growth potential.</p>
+                        
+                        <div class="solution-highlight">
+                            <h4>MBA Solution:</h4>
+                            <p>We'll promote your business to <span class="hinglish">1200+ new potential customers</span> in Moga through our WhatsApp group. <span class="hinglish">Naye customers aayenge, business badhega!</span></p>
+                        </div>
+                    </div>
+                    
+                    <div class="fear-card">
+                        <div class="fear-icon">
+                            <i class="fas fa-money-bill-wave"></i>
+                        </div>
+                        <h3>Marketing Budget Nahi Hai?</h3>
+                        <p>Big marketing agencies charge thousands of rupees. <span class="hinglish">Chhote business ke liye itna paisa kharcha karna mushkil hai.</span> But without marketing, growth stops.</p>
+                        
+                        <div class="solution-highlight">
+                            <h4>MBA Solution:</h4>
+                            <p>We provide <span class="hinglish">affordable marketing solutions</span> starting at just ₹200! <span class="hinglish">Kam budget mein bada marketing!</span> Get a professional website for only ₹2,999.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="fear-card">
+                        <div class="fear-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <h3>Online Presence Nahi Hai?</h3>
+                        <p>In today's digital world, <span class="hinglish">online nahi toh business piche reh jata hai.</span> Customers search online first before visiting any shop or service.</p>
+                        
+                        <div class="solution-highlight">
+                            <h4>MBA Solution:</h4>
+                            <p>We'll create your <span class="hinglish">professional website at 75% less cost</span> than market price. <span class="hinglish">Online dikhao apna business!</span> Customers will find you easily.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="fear-card">
+                        <div class="fear-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Business Growth Ruk Gaya?</h3>
+                        <p>Your business has reached a plateau? <span class="hinglish">Growth ruk gayi hai aur samajh nahi aa raha aage kaise badhayein?</span> This is a common challenge for local businesses.</p>
+                        
+                        <div class="solution-highlight">
+                            <h4>MBA Solution:</h4>
+                            <p>We provide <span class="hinglish">complete digital marketing package</span> - WhatsApp promotion, website, banners, and creative content. <span class="hinglish">Business ko do nayi pehchaan!</span></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 2.5rem;">
+                    <h3 style="color: var(--primary); margin-bottom: 1rem;">Don't Let Fear Stop Your Success!</h3>
+                    <p style="color: var(--darker-text); max-width: 800px; margin: 0 auto 1.5rem;"><span class="hinglish">Aaj hi decision lein aur apne business ko nayi heights tak le jayein!</span> MBA is here to solve all your marketing problems at affordable prices.</p>
+                    <a href="https://wa.me/917973890562?text=Hello%20and%20welcome%20to%20Moga%20Business%20Hub!%20%F0%9F%91%8B%F0%9F%92%BC%F0%9F%8C%9F%0AWe%E2%80%99re%20excited%20to%20have%20you%20here.%20%F0%9F%98%8A%F0%9F%8C%9F%0AWhether%20you%20want%20to%20promote%20your%20business%20in%20our%20marketing%20group%20%F0%9F%93%A2%F0%9F%92%AC%20or%20need%20a%20professional%20website%20to%20grow%20online%20%F0%9F%8C%90%F0%9F%9A%80%2C%20we%E2%80%99re%20here%20to%20support%20you%20every%20step%20of%20the%20way.%20%F0%9F%A4%9D%E2%9D%A4%0AShare%20your%20message%20anytime%20%E2%80%94%20we%E2%80%99ll%20respond%20shortly%20with%20the%20best%20guidance.%20%F0%9F%93%B2%F0%9F%98%8A%F0%9F%8C%9F" class="cta-button" target="_blank" style="padding: 0.8rem 2rem; font-size: 1rem;">
+                        <i class="fas fa-handshake"></i> Solve My Business Problems
                     </a>
                 </div>
             </div>
@@ -1233,7 +1456,7 @@
                     <h3>WhatsApp Promotion</h3>
                     <p>Reach 1200+ local customers instantly with your business ads in our WhatsApp group. <span class="hinglish">Business ko de do nayi pehchaan!</span></p>
                     <div class="price">₹200 per ad</div>
-                    <a href="https://wa.me/917973890562?text=Hi,%20I%20want%20to%20promote%20my%20business%20in%20your%20WhatsApp%20group" class="cta-button" target="_blank">Promote Now</a>
+                    <a href="https://wa.me/917973890562?text=Hello%20and%20welcome%20to%20Moga%20Business%20Hub!%20%F0%9F%91%8B%F0%9F%92%BC%F0%9F%8C%9F%0AWe%E2%80%99re%20excited%20to%20have%20you%20here.%20%F0%9F%98%8A%F0%9F%8C%9F%0AWhether%20you%20want%20to%20promote%20your%20business%20in%20our%20marketing%20group%20%F0%9F%93%A2%F0%9F%92%AC%20or%20need%20a%20professional%20website%20to%20grow%20online%20%F0%9F%8C%90%F0%9F%9A%80%2C%20we%E2%80%99re%20here%20to%20support%20you%20every%20step%20of%20the%20way.%20%F0%9F%A4%9D%E2%9D%A4%0AShare%20your%20message%20anytime%20%E2%80%94%20we%E2%80%99ll%20respond%20shortly%20with%20the%20best%20guidance.%20%F0%9F%93%B2%F0%9F%98%8A%F0%9F%8C%9F" class="cta-button" target="_blank">Promote Now</a>
                 </div>
                 
                 <div class="service-card">
@@ -1247,7 +1470,7 @@
                         <span class="new-price">₹2,999 Only</span>
                     </div>
                     <div class="savings">Save 75%</div>
-                    <a href="https://wa.me/917973890562?text=Hi,%20I%20want%20a%20website%20for%20my%20business" class="cta-button" target="_blank">Get Website</a>
+                    <a href="https://wa.me/917973890562?text=Hello%20and%20welcome%20to%20Moga%20Business%20Hub!%20%F0%9F%91%8B%F0%9F%92%BC%F0%9F%8C%9F%0AWe%E2%80%99re%20excited%20to%20have%20you%20here.%20%F0%9F%98%8A%F0%9F%8C%9F%0AWhether%20you%20want%20to%20promote%20your%20business%20in%20our%20marketing%20group%20%F0%9F%93%A2%F0%9F%92%AC%20or%20need%20a%20professional%20website%20to%20grow%20online%20%F0%9F%8C%90%F0%9F%9A%80%2C%20we%E2%80%99re%20here%20to%20support%20you%20every%20step%20of%20the%20way.%20%F0%9F%A4%9D%E2%9D%A4%0AShare%20your%20message%20anytime%20%E2%80%94%20we%E2%80%99ll%20respond%20shortly%20with%20the%20best%20guidance.%20%F0%9F%93%B2%F0%9F%98%8A%F0%9F%8C%9F" class="cta-button" target="_blank">Get Website</a>
                 </div>
                 
                 <div class="service-card">
@@ -1257,7 +1480,7 @@
                     <h3>Banner & Logo Design</h3>
                     <p>Professional banners and logos to make your business stand out. <span class="hinglish">Apne business ko do nayi jhalak!</span></p>
                     <div class="price">Starting at ₹499</div>
-                    <a href="https://wa.me/917973890562?text=Hi,%20I%20need%20a%20banner/logo%20for%20my%20business" class="cta-button" target="_blank">Design Now</a>
+                    <a href="https://wa.me/917973890562?text=Hello%20and%20welcome%20to%20Moga%20Business%20Hub!%20%F0%9F%91%8B%F0%9F%92%BC%F0%9F%8C%9F%0AWe%E2%80%99re%20excited%20to%20have%20you%20here.%20%F0%9F%98%8A%F0%9F%8C%9F%0AWhether%20you%20want%20to%20promote%20your%20business%20in%20our%20marketing%20group%20%F0%9F%93%A2%F0%9F%92%AC%20or%20need%20a%20professional%20website%20to%20grow%20online%20%F0%9F%8C%90%F0%9F%9A%80%2C%20we%E2%80%99re%20here%20to%20support%20you%20every%20step%20of%20the%20way.%20%F0%9F%A4%9D%E2%9D%A4%0AShare%20your%20message%20anytime%20%E2%80%94%20we%E2%80%99ll%20respond%20shortly%20with%20the%20best%20guidance.%20%F0%9F%93%B2%F0%9F%98%8A%F0%9F%8C%9F" class="cta-button" target="_blank">Design Now</a>
                 </div>
             </div>
         </div>
@@ -1359,7 +1582,7 @@
                     <h3>Creative Taglines</h3>
                     <p><span class="hinglish">Business ke liye catchy taglines</span> that make you stand out from competition</p>
                     <div class="price">Starting at ₹299</div>
-                    <a href="https://wa.me/917973890562?text=Hi,%20I%20need%20a%20creative%20tagline%20for%20my%20business" class="cta-button" target="_blank">Get Tagline</a>
+                    <a href="https://wa.me/917973890562?text=Hello%20and%20welcome%20to%20Moga%20Business%20Hub!%20%F0%9F%91%8B%F0%9F%92%BC%F0%9F%8C%9F%0AWe%E2%80%99re%20excited%20to%20have%20you%20here.%20%F0%9F%98%8A%F0%9F%8C%9F%0AWhether%20you%20want%20to%20promote%20your%20business%20in%20our%20marketing%20group%20%F0%9F%93%A2%F0%9F%92%AC%20or%20need%20a%20professional%20website%20to%20grow%20online%20%F0%9F%8C%90%F0%9F%9A%80%2C%20we%E2%80%99re%20here%20to%20support%20you%20every%20step%20of%20the%20way.%20%F0%9F%A4%9D%E2%9D%A4%0AShare%20your%20message%20anytime%20%E2%80%94%20we%E2%80%99ll%20respond%20shortly%20with%20the%20best%20guidance.%20%F0%9F%93%B2%F0%9F%98%8A%F0%9F%8C%9F" class="cta-button" target="_blank">Get Tagline</a>
                 </div>
                 
                 <div class="creative-card">
@@ -1369,7 +1592,7 @@
                     <h3>Instagram Bio & Posts</h3>
                     <p><span class="hinglish">Instagram ke liye attractive bio aur posts</span> that attract more followers</p>
                     <div class="price">Starting at ₹399</div>
-                    <a href="https://wa.me/917973890562?text=Hi,%20I%20need%20Instagram%20bio%20and%20posts%20for%20my%20business" class="cta-button" target="_blank">Get Bio</a>
+                    <a href="https://wa.me/917973890562?text=Hello%20and%20welcome%20to%20Moga%20Business%20Hub!%20%F0%9F%91%8B%F0%9F%92%BC%F0%9F%8C%9F%0AWe%E2%80%99re%20excited%20to%20have%20you%20here.%20%F0%9F%98%8A%F0%9F%8C%9F%0AWhether%20you%20want%20to%20promote%20your%20business%20in%20our%20marketing%20group%20%F0%9F%93%A2%F0%9F%92%AC%20or%20need%20a%20professional%20website%20to%20grow%20online%20%F0%9F%8C%90%F0%9F%9A%80%2C%20we%E2%80%99re%20here%20to%20support%20you%20every%20step%20of%20the%20way.%20%F0%9F%A4%9D%E2%9D%A4%0AShare%20your%20message%20anytime%20%E2%80%94%20we%E2%80%99ll%20respond%20shortly%20with%20the%20best%20guidance.%20%F0%9F%93%B2%F0%9F%98%8A%F0%9F%8C%9F" class="cta-button" target="_blank">Get Bio</a>
                 </div>
                 
                 <div class="creative-card">
@@ -1379,7 +1602,7 @@
                     <h3>Content Writing</h3>
                     <p><span class="hinglish">Business ke liye professional content</span> for websites, social media, and ads</p>
                     <div class="price">Starting at ₹499</div>
-                    <a href="https://wa.me/917973890562?text=Hi,%20I%20need%20content%20writing%20for%20my%20business" class="cta-button" target="_blank">Get Content</a>
+                    <a href="https://wa.me/917973890562?text=Hello%20and%20welcome%20to%20Moga%20Business%20Hub!%20%F0%9F%91%8B%F0%9F%92%BC%F0%9F%8C%9F%0AWe%E2%80%99re%20excited%20to%20have%20you%20here.%20%F0%9F%98%8A%F0%9F%8C%9F%0AWhether%20you%20want%20to%20promote%20your%20business%20in%20our%20marketing%20group%20%F0%9F%93%A2%F0%9F%92%AC%20or%20need%20a%20professional%20website%20to%20grow%20online%20%F0%9F%8C%90%F0%9F%9A%80%2C%20we%E2%80%99re%20here%20to%20support%20you%20every%20step%20of%20the%20way.%20%F0%9F%A4%9D%E2%9D%A4%0AShare%20your%20message%20anytime%20%E2%80%94%20we%E2%80%99ll%20respond%20shortly%20with%20the%20best%20guidance.%20%F0%9F%93%B2%F0%9F%98%8A%F0%9F%8C%9F" class="cta-button" target="_blank">Get Content</a>
                 </div>
             </div>
         </div>
@@ -1478,7 +1701,7 @@
                 <div class="contact-info">
                     <h3><span class="hinglish">Taiyar Hain Business Badhane Ke Liye?</span></h3>
                     <p>Start promoting your business to 1200+ local customers today.</p>
-                    <a href="https://wa.me/917973890562?text=Hi%20MBA,%20I%20want%20to%20attract%20more%20customers%20for%20my%20business" class="whatsapp-button" target="_blank" style="margin-top: 20px; display: inline-block;">
+                    <a href="https://wa.me/917973890562?text=Hello%20and%20welcome%20to%20Moga%20Business%20Hub!%20%F0%9F%91%8B%F0%9F%92%BC%F0%9F%8C%9F%0AWe%E2%80%99re%20excited%20to%20have%20you%20here.%20%F0%9F%98%8A%F0%9F%8C%9F%0AWhether%20you%20want%20to%20promote%20your%20business%20in%20our%20marketing%20group%20%F0%9F%93%A2%F0%9F%92%AC%20or%20need%20a%20professional%20website%20to%20grow%20online%20%F0%9F%8C%90%F0%9F%9A%80%2C%20we%E2%80%99re%20here%20to%20support%20you%20every%20step%20of%20the%20way.%20%F0%9F%A4%9D%E2%9D%A4%0AShare%20your%20message%20anytime%20%E2%80%94%20we%E2%80%99ll%20respond%20shortly%20with%20the%20best%20guidance.%20%F0%9F%93%B2%F0%9F%98%8A%F0%9F%8C%9F" class="whatsapp-button" target="_blank" style="margin-top: 20px; display: inline-block;">
                         <i class="fab fa-whatsapp"></i> Message on WhatsApp
                     </a>
                     <p style="margin-top: 15px; font-size: 0.9rem; color: var(--darker-text);">We respond within 30 minutes</p>
@@ -1487,7 +1710,7 @@
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- IMPROVED FOOTER -->
     <footer>
         <div class="container">
             <div class="footer-grid">
@@ -1495,7 +1718,7 @@
                     <h3>MBA - Moga Business AdHub</h3>
                     <p>Helping local businesses in Moga <span class="hinglish">tez growth karein</span> through affordable promotion and website services.</p>
                     <div class="social-links">
-                        <a href="https://wa.me/917973890562" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://wa.me/917973890562?text=Hello%20and%20welcome%20to%20Moga%20Business%20Hub!%20%F0%9F%91%8B%F0%9F%92%BC%F0%9F%8C%9F%0AWe%E2%80%99re%20excited%20to%20have%20you%20here.%20%F0%9F%98%8A%F0%9F%8C%9F%0AWhether%20you%20want%20to%20promote%20your%20business%20in%20our%20marketing%20group%20%F0%9F%93%A2%F0%9F%92%AC%20or%20need%20a%20professional%20website%20to%20grow%20online%20%F0%9F%8C%90%F0%9F%9A%80%2C%20we%E2%80%99re%20here%20to%20support%20you%20every%20step%20of%20the%20way.%20%F0%9F%A4%9D%E2%9D%A4%0AShare%20your%20message%20anytime%20%E2%80%94%20we%E2%80%99ll%20respond%20shortly%20with%20the%20best%20guidance.%20%F0%9F%93%B2%F0%9F%98%8A%F0%9F%8C%9F" target="_blank"><i class="fab fa-whatsapp"></i></a>
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
@@ -1506,6 +1729,7 @@
                     <ul class="footer-links">
                         <li><a href="#home">Home</a></li>
                         <li><a href="#service-area">Service Area</a></li>
+                        <li><a href="#fear-solution">Problem & Solution</a></li>
                         <li><a href="#services">Services</a></li>
                         <li><a href="#benefits">Benefits</a></li>
                         <li><a href="#creative">Creative Content</a></li>
@@ -1595,7 +1819,7 @@
         }, observerOptions);
         
         // Observe elements for animation
-        document.querySelectorAll('.service-card, .step, .benefit-card, .business-card, .creative-card, .service-area-card').forEach(el => {
+        document.querySelectorAll('.service-card, .step, .benefit-card, .business-card, .creative-card, .service-area-card, .fear-card').forEach(el => {
             el.style.opacity = '0';
             el.style.transform = 'translateY(20px)';
             el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
