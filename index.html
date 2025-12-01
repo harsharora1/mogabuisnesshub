@@ -46,11 +46,11 @@
             padding: 0 15px;
         }
         
-        /* HEADER & NAVIGATION */
+        /* IMPROVED HEADER & NAVIGATION - Smaller and more compact */
         header {
             background: var(--dark-card);
             color: var(--dark-text);
-            padding: 0.8rem 0;
+            padding: 0.5rem 0;
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -76,7 +76,7 @@
         }
         
         .logo i {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             color: var(--primary);
             flex-shrink: 0;
         }
@@ -88,7 +88,7 @@
         }
         
         .logo-main {
-            font-size: 1.1rem;
+            font-size: 1rem;
             white-space: nowrap;
             display: flex;
             align-items: center;
@@ -97,15 +97,15 @@
         
         .logo-short {
             background: var(--gradient-accent);
-            padding: 4px 6px;
+            padding: 3px 5px;
             border-radius: 4px;
-            font-size: 0.8rem;
+            font-size: 0.7rem;
             white-space: nowrap;
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            height: 22px;
-            margin-left: 5px;
+            height: 18px;
+            margin-left: 4px;
             line-height: 1;
         }
         
@@ -128,7 +128,7 @@
         }
         
         .nav-links li {
-            margin: 0.3rem 0;
+            margin: 0.2rem 0;
             list-style: none;
             position: relative;
         }
@@ -149,8 +149,8 @@
             font-weight: 500;
             transition: all 0.3s ease;
             display: block;
-            padding: 0.4rem 0;
-            font-size: 0.9rem;
+            padding: 0.3rem 0;
+            font-size: 0.85rem;
         }
         
         .nav-links a:hover {
@@ -162,7 +162,7 @@
             background: none;
             border: none;
             color: var(--dark-text);
-            font-size: 1.3rem;
+            font-size: 1.1rem;
             cursor: pointer;
             padding: 5px;
             flex-shrink: 0;
@@ -172,7 +172,7 @@
         .cta-button, .phone-button, .whatsapp-button {
             color: white;
             border: none;
-            padding: 0.7rem 1.4rem;
+            padding: 0.6rem 1.2rem;
             border-radius: 50px;
             font-weight: 600;
             cursor: pointer;
@@ -181,8 +181,8 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            gap: 8px;
-            font-size: 0.85rem;
+            gap: 6px;
+            font-size: 0.8rem;
             white-space: nowrap;
             line-height: 1;
             text-align: center;
@@ -223,7 +223,7 @@
         
         /* HERO SECTION */
         .hero {
-            padding: 2.5rem 0;
+            padding: 2rem 0;
             background: var(--dark-card);
             color: var(--dark-text);
             text-align: center;
@@ -239,21 +239,21 @@
         }
         
         .hero h1 {
-            font-size: 1.9rem;
-            margin-bottom: 1rem;
+            font-size: 1.7rem;
+            margin-bottom: 0.8rem;
             line-height: 1.3;
         }
         
         .hero p {
-            font-size: 1.05rem;
-            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+            margin-bottom: 1.2rem;
             color: var(--darker-text);
             padding: 0 10px;
         }
         
         .hindi-tagline {
-            font-size: 1.2rem;
-            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            margin-bottom: 1.2rem;
             font-weight: 600;
             color: var(--highlight);
             padding: 0 10px;
@@ -263,50 +263,50 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 10px;
-            margin-bottom: 1.5rem;
+            gap: 8px;
+            margin-bottom: 1.2rem;
         }
         
         .stats {
             display: flex;
             justify-content: center;
-            gap: 1.2rem;
-            margin-top: 1.5rem;
+            gap: 1rem;
+            margin-top: 1.2rem;
             flex-wrap: wrap;
         }
         
         .stat-item {
             text-align: center;
             transition: all 0.3s ease;
-            min-width: 80px;
+            min-width: 70px;
         }
         
         .stat-number {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             font-weight: 700;
             margin-bottom: 0.2rem;
             color: var(--primary);
         }
         
         .stat-label {
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             color: var(--darker-text);
         }
         
         /* SECTION STYLES */
         section {
-            padding: 3rem 0;
+            padding: 2.5rem 0;
         }
         
         .section-title {
             text-align: center;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
         }
         
         .section-title h2 {
-            font-size: 1.8rem;
+            font-size: 1.6rem;
             color: var(--primary);
-            margin-bottom: 0.8rem;
+            margin-bottom: 0.6rem;
         }
         
         .section-title p {
@@ -314,9 +314,10 @@
             max-width: 800px;
             margin: 0 auto;
             padding: 0 10px;
+            font-size: 0.9rem;
         }
         
-        /* SERVICE AREA SECTION */
+        /* SERVICE AREA SECTION - Centered cards */
         .service-area {
             background: var(--dark-bg);
             position: relative;
@@ -344,14 +345,15 @@
         .service-area-highlight {
             color: var(--highlight);
             font-weight: 700;
-            font-size: 1.4rem;
-            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+            margin-bottom: 1.2rem;
             display: block;
         }
         
         .service-area-grid {
-            display: grid;
-            grid-template-columns: 1fr;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             gap: 1.5rem;
             margin-top: 2rem;
         }
@@ -359,13 +361,15 @@
         .service-area-card {
             background: var(--dark-card);
             border-radius: 12px;
-            padding: 2rem 1.5rem;
+            padding: 1.8rem 1.5rem;
             text-align: center;
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
             transition: all 0.3s ease;
             border: 1px solid rgba(157, 0, 255, 0.2);
             position: relative;
             overflow: hidden;
+            width: 100%;
+            max-width: 500px;
         }
         
         .service-area-card::before {
@@ -385,16 +389,16 @@
         }
         
         .area-icon {
-            width: 70px;
-            height: 70px;
+            width: 65px;
+            height: 65px;
             background: var(--gradient);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 1.5rem;
+            margin: 0 auto 1.2rem;
             color: white;
-            font-size: 1.8rem;
+            font-size: 1.6rem;
             transition: all 0.3s ease;
         }
         
@@ -404,15 +408,15 @@
         }
         
         .service-area-card h3 {
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
             color: var(--primary);
         }
         
         .service-area-card p {
             color: var(--darker-text);
-            margin-bottom: 1.5rem;
-            font-size: 0.95rem;
+            margin-bottom: 1.2rem;
+            font-size: 0.9rem;
         }
         
         .punjab-highlight {
@@ -424,16 +428,16 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 10px;
-            margin-top: 1.5rem;
+            gap: 8px;
+            margin-top: 1.2rem;
         }
         
         .city-tag {
             background: rgba(157, 0, 255, 0.2);
             color: var(--primary);
-            padding: 6px 12px;
+            padding: 5px 10px;
             border-radius: 20px;
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             font-weight: 500;
             border: 1px solid rgba(157, 0, 255, 0.3);
         }
@@ -464,9 +468,9 @@
         }
         
         .fear-solution-subtitle {
-            font-size: 1.1rem;
+            font-size: 1rem;
             color: var(--darker-text);
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
             max-width: 800px;
             margin-left: auto;
             margin-right: auto;
@@ -476,13 +480,13 @@
             display: grid;
             grid-template-columns: 1fr;
             gap: 1.5rem;
-            margin-top: 2rem;
+            margin-top: 1.5rem;
         }
         
         .fear-card {
             background: var(--dark-card);
             border-radius: 12px;
-            padding: 2rem 1.5rem;
+            padding: 1.8rem 1.5rem;
             text-align: center;
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
             transition: all 0.3s ease;
@@ -508,16 +512,16 @@
         }
         
         .fear-icon {
-            width: 70px;
-            height: 70px;
+            width: 65px;
+            height: 65px;
             background: var(--gradient-accent);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 1.5rem;
+            margin: 0 auto 1.2rem;
             color: white;
-            font-size: 1.8rem;
+            font-size: 1.6rem;
             transition: all 0.3s ease;
         }
         
@@ -527,20 +531,20 @@
         }
         
         .fear-card h3 {
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
             color: var(--accent);
         }
         
         .fear-card p {
             color: var(--darker-text);
-            margin-bottom: 1.5rem;
-            font-size: 0.95rem;
+            margin-bottom: 1.2rem;
+            font-size: 0.9rem;
         }
         
         .solution-highlight {
             background: rgba(157, 0, 255, 0.2);
-            padding: 1.2rem;
+            padding: 1rem;
             border-radius: 10px;
             margin-top: 1rem;
             border-left: 4px solid var(--primary);
@@ -549,13 +553,13 @@
         .solution-highlight h4 {
             color: var(--primary);
             margin-bottom: 0.5rem;
-            font-size: 1.1rem;
+            font-size: 1rem;
         }
         
         .solution-highlight p {
             color: var(--dark-text);
             margin-bottom: 0;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
         }
         
         /* SERVICES SECTION */
@@ -572,7 +576,7 @@
         .service-card {
             background: var(--dark-card);
             border-radius: 10px;
-            padding: 1.8rem 1.2rem;
+            padding: 1.6rem 1.2rem;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
             transition: all 0.3s ease;
             text-align: center;
@@ -597,16 +601,16 @@
         }
         
         .service-icon {
-            width: 60px;
-            height: 60px;
+            width: 55px;
+            height: 55px;
             background: var(--gradient);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 1.2rem;
+            margin: 0 auto 1rem;
             color: white;
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             transition: all 0.3s ease;
         }
         
@@ -615,40 +619,40 @@
         }
         
         .service-card h3 {
-            font-size: 1.2rem;
-            margin-bottom: 0.8rem;
+            font-size: 1.1rem;
+            margin-bottom: 0.7rem;
             color: var(--primary);
         }
         
         .service-card p {
             color: var(--darker-text);
-            margin-bottom: 1.2rem;
-            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            font-size: 0.85rem;
         }
         
         .price {
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             font-weight: 700;
             color: var(--accent);
-            margin: 0.8rem 0;
+            margin: 0.7rem 0;
         }
         
         .price-comparison {
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 8px;
-            margin: 8px 0;
+            gap: 6px;
+            margin: 6px 0;
         }
         
         .old-price {
             text-decoration: line-through;
             color: #777;
-            font-size: 1rem;
+            font-size: 0.9rem;
         }
         
         .new-price {
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             font-weight: 700;
             color: var(--accent);
         }
@@ -656,11 +660,11 @@
         .savings {
             background: var(--gradient-accent);
             color: white;
-            padding: 4px 8px;
+            padding: 3px 6px;
             border-radius: 12px;
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             font-weight: 600;
-            margin-top: 5px;
+            margin-top: 4px;
             display: inline-block;
         }
         
@@ -679,7 +683,7 @@
         
         .step {
             text-align: center;
-            padding: 1.5rem 1rem;
+            padding: 1.3rem 1rem;
             position: relative;
             transition: all 0.3s ease;
         }
@@ -689,17 +693,17 @@
         }
         
         .step-number {
-            width: 50px;
-            height: 50px;
+            width: 45px;
+            height: 45px;
             background: var(--gradient-accent);
             color: white;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             font-weight: 700;
-            margin: 0 auto 1rem;
+            margin: 0 auto 0.8rem;
             box-shadow: 0 4px 10px rgba(255, 107, 53, 0.3);
             transition: all 0.3s ease;
         }
@@ -711,14 +715,14 @@
         }
         
         .step h3 {
-            margin-bottom: 0.8rem;
+            margin-bottom: 0.7rem;
             color: var(--primary);
-            font-size: 1.1rem;
+            font-size: 1rem;
         }
         
         .step p {
             color: var(--darker-text);
-            font-size: 0.9rem;
+            font-size: 0.85rem;
         }
         
         /* BENEFITS SECTION */
@@ -735,7 +739,7 @@
         .benefit-card {
             background: var(--dark-card);
             border-radius: 10px;
-            padding: 1.8rem 1.2rem;
+            padding: 1.6rem 1.2rem;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
             transition: all 0.3s ease;
             text-align: center;
@@ -748,16 +752,16 @@
         }
         
         .benefit-icon {
-            width: 55px;
-            height: 55px;
+            width: 50px;
+            height: 50px;
             background: var(--gradient);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 1.2rem;
+            margin: 0 auto 1rem;
             color: white;
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             transition: all 0.3s ease;
         }
         
@@ -767,14 +771,14 @@
         }
         
         .benefit-card h3 {
-            font-size: 1.1rem;
-            margin-bottom: 0.8rem;
+            font-size: 1rem;
+            margin-bottom: 0.7rem;
             color: var(--primary);
         }
         
         .benefit-card p {
             color: var(--darker-text);
-            font-size: 0.9rem;
+            font-size: 0.85rem;
         }
         
         /* CREATIVE CONTENT SECTION */
@@ -792,7 +796,7 @@
         .creative-card {
             background: rgba(157, 0, 255, 0.1);
             border-radius: 10px;
-            padding: 1.8rem 1.2rem;
+            padding: 1.6rem 1.2rem;
             text-align: center;
             backdrop-filter: blur(10px);
             border: 1px solid rgba(157, 0, 255, 0.3);
@@ -806,14 +810,14 @@
         }
         
         .creative-card h3 {
-            font-size: 1.2rem;
-            margin-bottom: 0.8rem;
+            font-size: 1.1rem;
+            margin-bottom: 0.7rem;
             color: var(--primary);
         }
         
         .creative-icon {
-            font-size: 2.2rem;
-            margin-bottom: 1.2rem;
+            font-size: 2rem;
+            margin-bottom: 1rem;
             color: var(--highlight);
             transition: all 0.3s ease;
         }
@@ -825,8 +829,8 @@
         
         .creative-card p {
             color: var(--darker-text);
-            margin-bottom: 1.2rem;
-            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            font-size: 0.85rem;
         }
         
         /* BUSINESS TYPES SECTION */
@@ -843,7 +847,7 @@
         .business-card {
             background: var(--dark-card);
             border-radius: 8px;
-            padding: 1.5rem 1rem;
+            padding: 1.3rem 0.8rem;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
             transition: all 0.3s ease;
             text-align: center;
@@ -856,16 +860,16 @@
         }
         
         .business-icon {
-            width: 50px;
-            height: 50px;
+            width: 45px;
+            height: 45px;
             background: var(--gradient);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 1rem;
+            margin: 0 auto 0.8rem;
             color: white;
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             transition: all 0.3s ease;
         }
         
@@ -875,14 +879,14 @@
         }
         
         .business-card h3 {
-            font-size: 1rem;
-            margin-bottom: 0.6rem;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
             color: var(--primary);
         }
         
         .business-card p {
             color: var(--darker-text);
-            font-size: 0.8rem;
+            font-size: 0.75rem;
         }
         
         /* CONTACT SECTION */
@@ -893,24 +897,24 @@
         .contact-container {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 2rem;
+            gap: 1.5rem;
         }
         
         .contact-info h3 {
-            font-size: 1.4rem;
-            margin-bottom: 1.2rem;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
             color: var(--primary);
         }
         
         .contact-details {
-            margin-top: 1.5rem;
+            margin-top: 1.2rem;
         }
         
         .contact-item {
             display: flex;
             align-items: center;
-            gap: 1rem;
-            margin-bottom: 1.2rem;
+            gap: 0.8rem;
+            margin-bottom: 1rem;
             transition: all 0.3s ease;
         }
         
@@ -919,15 +923,15 @@
         }
         
         .contact-icon {
-            width: 45px;
-            height: 45px;
+            width: 40px;
+            height: 40px;
             background: var(--gradient);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
-            font-size: 1.1rem;
+            font-size: 1rem;
             transition: all 0.3s ease;
         }
         
@@ -940,21 +944,21 @@
         footer {
             background-color: #0A0A0A;
             color: var(--dark-text);
-            padding: 2rem 0 1rem;
+            padding: 1.5rem 0 1rem;
         }
         
         .footer-grid {
             display: grid;
             grid-template-columns: 1fr;
             gap: 1.5rem;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.2rem;
         }
         
         .footer-col h3 {
-            font-size: 1.1rem;
-            margin-bottom: 1rem;
+            font-size: 1rem;
+            margin-bottom: 0.8rem;
             position: relative;
-            padding-bottom: 0.5rem;
+            padding-bottom: 0.3rem;
             color: var(--primary);
         }
         
@@ -973,7 +977,7 @@
         }
         
         .footer-links li {
-            margin-bottom: 0.6rem;
+            margin-bottom: 0.5rem;
             transition: all 0.3s ease;
         }
         
@@ -985,7 +989,7 @@
             color: var(--darker-text);
             text-decoration: none;
             transition: all 0.3s ease;
-            font-size: 0.9rem;
+            font-size: 0.8rem;
         }
         
         .footer-links a:hover {
@@ -995,13 +999,13 @@
         
         .social-links {
             display: flex;
-            gap: 0.8rem;
-            margin-top: 1rem;
+            gap: 0.6rem;
+            margin-top: 0.8rem;
         }
         
         .social-links a {
-            width: 35px;
-            height: 35px;
+            width: 30px;
+            height: 30px;
             background: rgba(157, 0, 255, 0.2);
             border-radius: 50%;
             display: flex;
@@ -1019,10 +1023,10 @@
         
         .copyright {
             text-align: center;
-            padding-top: 1.5rem;
+            padding-top: 1rem;
             border-top: 1px solid #333;
             color: var(--darker-text);
-            font-size: 0.8rem;
+            font-size: 0.75rem;
         }
         
         /* Hindi-English Mix Styling */
@@ -1038,22 +1042,22 @@
             }
             
             .logo {
-                font-size: 1.4rem;
+                font-size: 1.2rem;
             }
             
             .logo i {
-                font-size: 1.6rem;
+                font-size: 1.4rem;
             }
             
             .logo-main {
-                font-size: 1.3rem;
+                font-size: 1.1rem;
             }
             
             .logo-short {
-                padding: 4px 8px;
-                font-size: 0.9rem;
-                height: 24px;
-                margin-left: 6px;
+                padding: 3px 6px;
+                font-size: 0.8rem;
+                height: 20px;
+                margin-left: 5px;
             }
             
             .nav-links {
@@ -1064,8 +1068,8 @@
                 background: transparent;
                 padding: 0;
                 box-shadow: none;
-                gap: 1.5rem;
-                margin: 0 2rem;
+                gap: 1.2rem;
+                margin: 0 1.5rem;
             }
             
             .nav-links li {
@@ -1077,8 +1081,8 @@
             }
             
             .nav-links a {
-                padding: 0.5rem 0.8rem;
-                font-size: 0.9rem;
+                padding: 0.4rem 0.6rem;
+                font-size: 0.85rem;
                 position: relative;
             }
             
@@ -1102,11 +1106,20 @@
             }
             
             .cta-button, .phone-button, .whatsapp-button {
-                padding: 0.8rem 1.8rem;
-                font-size: 1rem;
+                padding: 0.7rem 1.5rem;
+                font-size: 0.9rem;
             }
             
-            .service-area-grid,
+            .service-area-grid {
+                flex-direction: row;
+                justify-content: center;
+                align-items: stretch;
+            }
+            
+            .service-area-card {
+                max-width: 400px;
+            }
+            
             .fear-solution-grid,
             .services-grid,
             .benefits-grid,
@@ -1120,7 +1133,7 @@
             
             .business-grid {
                 grid-template-columns: repeat(3, 1fr);
-                gap: 1.5rem;
+                gap: 1.2rem;
             }
             
             .contact-container {
@@ -1129,7 +1142,7 @@
             
             .footer-grid {
                 grid-template-columns: 2fr 1fr 1fr 1fr;
-                gap: 2rem;
+                gap: 1.5rem;
             }
         }
         
@@ -1140,11 +1153,18 @@
             }
             
             .nav-links {
-                gap: 2rem;
-                margin: 0 3rem;
+                gap: 1.5rem;
+                margin: 0 2rem;
             }
             
-            .service-area-grid,
+            .service-area-grid {
+                gap: 2rem;
+            }
+            
+            .service-area-card {
+                max-width: 450px;
+            }
+            
             .fear-solution-grid,
             .services-grid,
             .benefits-grid,
@@ -1204,7 +1224,7 @@
     </style>
 </head>
 <body>
-    <!-- HEADER -->
+    <!-- IMPROVED HEADER - Smaller and more compact -->
     <header>
         <div class="container">
             <nav class="navbar">
@@ -1272,7 +1292,7 @@
         </div>
     </section>
 
-    <!-- SERVICE AREA SECTION -->
+    <!-- SERVICE AREA SECTION - Centered cards -->
     <section class="service-area" id="service-area">
         <div class="container">
             <div class="service-area-content">
@@ -1312,10 +1332,10 @@
                     </div>
                 </div>
                 
-                <div style="text-align: center; margin-top: 2.5rem;">
+                <div style="text-align: center; margin-top: 2rem;">
                     <h3 style="color: var(--primary); margin-bottom: 1rem;">For All Punjab Businesses</h3>
                     <p style="color: var(--darker-text); max-width: 800px; margin: 0 auto 1.5rem;" class="content-text">Big marketing agencies often ignore small cities and local businesses. <span class="hinglish">MBA aapke liye banaya gaya hai!</span> We understand the challenges faced by local businesses in Punjab and provide solutions that work for you.</p>
-                    <a href="https://wa.me/917973890562?text=Hello%20and%20welcome%20to%20Moga%20Business%20Hub!%20%F0%9F%91%8B%F0%9F%92%BC%F0%9F%8C%9F%0AWe%E2%80%99re%20excited%20to%20have%20you%20here.%20%F0%9F%98%8A%F0%9F%8C%9F%0AWhether%20you%20want%20to%20promote%20your%20business%20in%20our%20marketing%20group%20%F0%9F%93%A2%F0%9F%92%AC%20or%20need%20a%20professional%20website%20to%20grow%20online%20%F0%9F%8C%90%F0%9F%9A%80%2C%20we%E2%80%99re%20here%20to%20support%20you%20every%20step%20of%20the%20way.%20%F0%9F%A4%9D%E2%9D%A4%0AShare%20your%20message%20anytime%20%E2%80%94%20we%E2%80%99ll%20respond%20shortly%20with%20the%20best%20guidance.%20%F0%9F%93%B2%F0%9F%98%8A%F0%9F%8C%9F" class="cta-button" target="_blank" style="padding: 0.8rem 2rem; font-size: 1rem;">
+                    <a href="https://wa.me/917973890562?text=Hello%20and%20welcome%20to%20Moga%20Business%20Hub!%20%F0%9F%91%8B%F0%9F%92%BC%F0%9F%8C%9F%0AWe%E2%80%99re%20excited%20to%20have%20you%20here.%20%F0%9F%98%8A%F0%9F%8C%9F%0AWhether%20you%20want%20to%20promote%20your%20business%20in%20our%20marketing%20group%20%F0%9F%93%A2%F0%9F%92%AC%20or%20need%20a%20professional%20website%20to%20grow%20online%20%F0%9F%8C%90%F0%9F%9A%80%2C%20we%E2%80%99re%20here%20to%20support%20you%20every%20step%20of%20the%20way.%20%F0%9F%A4%9D%E2%9D%A4%0AShare%20your%20message%20anytime%20%E2%80%94%20we%E2%80%99ll%20respond%20shortly%20with%20the%20best%20guidance.%20%F0%9F%93%B2%F0%9F%98%8A%F0%9F%8C%9F" class="cta-button" target="_blank" style="padding: 0.7rem 1.8rem; font-size: 0.9rem;">
                         <i class="fas fa-rocket"></i> Promote My Business
                     </a>
                 </div>
@@ -1386,10 +1406,10 @@
                     </div>
                 </div>
                 
-                <div style="text-align: center; margin-top: 2.5rem;">
+                <div style="text-align: center; margin-top: 2rem;">
                     <h3 style="color: var(--primary); margin-bottom: 1rem;">Don't Let Fear Stop Your Success!</h3>
                     <p style="color: var(--darker-text); max-width: 800px; margin: 0 auto 1.5rem;" class="content-text"><span class="hinglish">Aaj hi decision lein aur apne business ko nayi heights tak le jayein!</span> MBA is here to solve all your marketing problems at affordable prices.</p>
-                    <a href="https://wa.me/917973890562?text=Hello%20and%20welcome%20to%20Moga%20Business%20Hub!%20%F0%9F%91%8B%F0%9F%92%BC%F0%9F%8C%9F%0AWe%E2%80%99re%20excited%20to%20have%20you%20here.%20%F0%9F%98%8A%F0%9F%8C%9F%0AWhether%20you%20want%20to%20promote%20your%20business%20in%20our%20marketing%20group%20%F0%9F%93%A2%F0%9F%92%AC%20or%20need%20a%20professional%20website%20to%20grow%20online%20%F0%9F%8C%90%F0%9F%9A%80%2C%20we%E2%80%99re%20here%20to%20support%20you%20every%20step%20of%20the%20way.%20%F0%9F%A4%9D%E2%9D%A4%0AShare%20your%20message%20anytime%20%E2%80%94%20we%E2%80%99ll%20respond%20shortly%20with%20the%20best%20guidance.%20%F0%9F%93%B2%F0%9F%98%8A%F0%9F%8C%9F" class="cta-button" target="_blank" style="padding: 0.8rem 2rem; font-size: 1rem;">
+                    <a href="https://wa.me/917973890562?text=Hello%20and%20welcome%20to%20Moga%20Business%20Hub!%20%F0%9F%91%8B%F0%9F%92%BC%F0%9F%8C%9F%0AWe%E2%80%99re%20excited%20to%20have%20you%20here.%20%F0%9F%98%8A%F0%9F%8C%9F%0AWhether%20you%20want%20to%20promote%20your%20business%20in%20our%20marketing%20group%20%F0%9F%93%A2%F0%9F%92%AC%20or%20need%20a%20professional%20website%20to%20grow%20online%20%F0%9F%8C%90%F0%9F%9A%80%2C%20we%E2%80%99re%20here%20to%20support%20you%20every%20step%20of%20the%20way.%20%F0%9F%A4%9D%E2%9D%A4%0AShare%20your%20message%20anytime%20%E2%80%94%20we%E2%80%99ll%20respond%20shortly%20with%20the%20best%20guidance.%20%F0%9F%93%B2%F0%9F%98%8A%F0%9F%8C%9F" class="cta-button" target="_blank" style="padding: 0.7rem 1.8rem; font-size: 0.9rem;">
                         <i class="fas fa-handshake"></i> Solve My Business Problems
                     </a>
                 </div>
@@ -1774,7 +1794,7 @@
                 const targetElement = document.querySelector(targetId);
                 if(targetElement) {
                     window.scrollTo({
-                        top: targetElement.offsetTop - 80,
+                        top: targetElement.offsetTop - 60,
                         behavior: 'smooth'
                     });
                     
