@@ -1096,7 +1096,7 @@
             font-size: 0.8rem;
         }
         
-        /* Business Types Section - Mobile First */
+        /* UPDATED Business Types Section - Added Wholesalers and Manufacturers */
         .business-types {
             padding: 2rem 0;
             background-color: var(--dark-bg);
@@ -1151,6 +1151,26 @@
         .business-card p {
             color: var(--darker-text);
             font-size: 0.75rem;
+        }
+        
+        /* Updated grid for desktop to accommodate 6 items */
+        @media (min-width: 768px) {
+            .business-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 1.2rem;
+            }
+            
+            .business-card {
+                padding: 1.5rem 1rem;
+            }
+            
+            .business-card h3 {
+                font-size: 1rem;
+            }
+            
+            .business-card p {
+                font-size: 0.8rem;
+            }
         }
         
         /* Contact Section - Mobile First */
@@ -1719,12 +1739,12 @@
         </div>
     </section>
 
-    <!-- Business Types Section -->
+    <!-- UPDATED Business Types Section with Wholesalers and Manufacturers -->
     <section class="business-types" id="business-types">
         <div class="container">
             <div class="section-title">
                 <h2>Kaunse Businesses Help Karte Hain</h2>
-                <p class="content-text">We promote <span class="hinglish">har type ke local businesses</span> in Moga</p>
+                <p class="content-text">We promote <span class="hinglish">har type ke local businesses</span> in Moga and across Punjab</p>
             </div>
             
             <div class="business-grid">
@@ -1759,6 +1779,33 @@
                     <h3>Professionals</h3>
                     <p class="content-text">Doctors, lawyers, accountants, consultants, freelancers</p>
                 </div>
+                
+                <!-- NEW: Wholesalers Card -->
+                <div class="business-card">
+                    <div class="business-icon">
+                        <i class="fas fa-boxes"></i>
+                    </div>
+                    <h3>Wholesalers</h3>
+                    <p class="content-text">Distributors, suppliers, bulk sellers across all industries</p>
+                </div>
+                
+                <!-- NEW: Manufacturers Card -->
+                <div class="business-card">
+                    <div class="business-icon">
+                        <i class="fas fa-industry"></i>
+                    </div>
+                    <h3>Manufacturers</h3>
+                    <p class="content-text">Factory owners, production units, industrial goods makers</p>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 2rem;">
+                <p class="content-text" style="color: var(--darker-text); margin-bottom: 1.5rem;">
+                    <span class="hinglish">Koi bhi business ho, MBA aapki help ke liye hai!</span> We help all types of businesses grow with our affordable marketing solutions.
+                </p>
+                <a href="https://wa.me/917973890562?text=Hello%20and%20welcome%20to%20Moga%20Business%20Hub!%20%F0%9F%91%8B%F0%9F%92%BC%F0%9F%8C%9F%0AWe%E2%80%99re%20excited%20to%20have%20you%20here.%20%F0%9F%98%8A%F0%9F%8C%9F%0AWhether%20you%20want%20to%20promote%20your%20business%20in%20our%20marketing%20group%20%F0%9F%93%A2%F0%9F%92%AC%20or%20need%20a%20professional%20website%20to%20grow%20online%20%F0%9F%8C%90%F0%9F%9A%80%2C%20we%E2%80%99re%20here%20to%20support%20you%20every%20step%20of%20the%20way.%20%F0%9F%A4%9D%E2%9D%A4%0AShare%20your%20message%20anytime%20%E2%80%94%20we%E2%80%99ll%20respond%20shortly%20with%20the%20best%20guidance.%20%F0%9F%93%B2%F0%9F%98%8A%F0%9F%8C%9F" class="cta-button" target="_blank">
+                    <i class="fas fa-rocket"></i> Promote My Business
+                </a>
             </div>
         </div>
     </section>
@@ -1844,6 +1891,7 @@
                         <li><a href="#services">Services</a></li>
                         <li><a href="#benefits">Benefits</a></li>
                         <li><a href="#creative">Creative Content</a></li>
+                        <li><a href="#business-types">Business Types</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
