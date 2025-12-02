@@ -43,26 +43,8 @@
             -webkit-tap-highlight-color: transparent;
         }
         
-        /* Allow text selection only for specific content elements */
-        .content-text, 
-        .service-card p, 
-        .benefit-card p, 
-        .business-card p, 
-        .creative-card p, 
-        .step p, 
-        .fear-card p, 
-        .solution-highlight p,
-        .service-area-card p, 
-        .contact-info p, 
-        .footer-col p, 
-        .hero p,
-        .section-title p, 
-        .fear-solution-subtitle, 
-        .service-area-subtitle,
-        .contact-details p,
-        .footer-links a,
-        .footer-links li,
-        .copyright p {
+        /* Allow text selection ONLY for input and textarea */
+        input, textarea {
             -webkit-user-select: text;
             -moz-user-select: text;
             -ms-user-select: text;
@@ -1311,62 +1293,6 @@
             .footer-col:first-child {
                 grid-column: 1 / 3;
             }
-        }
-        
-        /* Prevent copying for all other elements */
-        h1, h2, h3, h4, h5, h6,
-        .logo, .logo-main, .logo-short,
-        .nav-links a,
-        .menu-toggle,
-        .stat-item, .stat-number, .stat-label,
-        .city-tag,
-        .price, .old-price, .new-price, .savings,
-        .section-title h2,
-        .service-area-highlight,
-        .service-card h3,
-        .step h3,
-        .benefit-card h3,
-        .creative-card h3,
-        .fear-card h3,
-        .solution-highlight h4,
-        .business-card h3,
-        .contact-info h3,
-        .footer-col h3,
-        .hero h1,
-        .hindi-tagline,
-        .hinglish,
-        .cta-button, .phone-button, .whatsapp-button,
-        .area-icon, .service-icon, .benefit-icon, .business-icon, .creative-icon, .fear-icon, .contact-icon,
-        .social-links a {
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-            cursor: default;
-        }
-        
-        /* Allow selection for buttons text */
-        .cta-button, .phone-button, .whatsapp-button {
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-        }
-        
-        /* Make links selectable for screen readers but not for regular copying */
-        a {
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-        }
-        
-        /* Exception: Allow selection in text areas for forms if any */
-        input, textarea {
-            -webkit-user-select: text;
-            -moz-user-select: text;
-            -ms-user-select: text;
-            user-select: text;
         }
     </style>
 </head>
