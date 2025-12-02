@@ -46,7 +46,7 @@
             padding: 0 15px;
         }
         
-        /* IMPROVED HEADER & NAVIGATION - Increased size */
+        /* IMPROVED HEADER & NAVIGATION */
         header {
             background: var(--dark-card);
             color: var(--dark-text);
@@ -72,18 +72,17 @@
             font-weight: 700;
             flex-shrink: 0;
             text-decoration: none;
-            color: var(--dark-text);
+            color: white;
             transition: all 0.3s ease;
         }
         
         .logo:hover {
-            color: var(--primary);
             transform: translateY(-2px);
         }
         
         .logo i {
             font-size: 1.6rem;
-            color: var(--primary);
+            color: #9D00FF;
             flex-shrink: 0;
             transition: all 0.3s ease;
         }
@@ -194,34 +193,7 @@
             transform: scale(1.1);
         }
         
-        /* SECTION HEADLINES WITH UNDERLINE */
-        .section-headline {
-            position: relative;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-        
-        .section-headline h2 {
-            font-size: 1.6rem;
-            color: var(--primary);
-            display: inline-block;
-            position: relative;
-        }
-        
-        .section-headline h2::after {
-            content: '';
-            position: absolute;
-            width: 80px;
-            height: 4px;
-            background: var(--gradient-accent);
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            border-radius: 2px;
-        }
-        
-        /* Section title styles with underline */
+        /* Section title styles with underline - ONLY FOR MAIN SECTION HEADLINES */
         .section-title {
             text-align: center;
             margin-bottom: 1.5rem;
@@ -330,21 +302,6 @@
             font-size: 1.9rem;
             margin-bottom: 0.8rem;
             line-height: 1.3;
-            position: relative;
-            padding-bottom: 15px;
-            display: inline-block;
-        }
-        
-        .hero h1::after {
-            content: '';
-            position: absolute;
-            width: 100px;
-            height: 4px;
-            background: var(--gradient-accent);
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            border-radius: 2px;
         }
         
         .hero p {
@@ -382,6 +339,18 @@
             text-align: center;
             transition: all 0.3s ease;
             min-width: 80px;
+            padding: 15px 20px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            cursor: default;
+        }
+        
+        .stat-item:hover {
+            transform: translateY(-8px);
+            background: rgba(157, 0, 255, 0.1);
+            border-color: var(--primary);
+            box-shadow: 0 8px 25px rgba(157, 0, 255, 0.2);
         }
         
         .stat-number {
@@ -389,11 +358,22 @@
             font-weight: 700;
             margin-bottom: 0.3rem;
             color: var(--primary);
+            transition: all 0.3s ease;
+        }
+        
+        .stat-item:hover .stat-number {
+            color: var(--accent);
+            transform: scale(1.1);
         }
         
         .stat-label {
             font-size: 0.8rem;
             color: var(--darker-text);
+            transition: all 0.3s ease;
+        }
+        
+        .stat-item:hover .stat-label {
+            color: var(--dark-text);
         }
         
         /* SECTION STYLES */
@@ -401,7 +381,7 @@
             padding: 3rem 0;
         }
         
-        /* SERVICE AREA SECTION - Centered cards */
+        /* SERVICE AREA SECTION */
         .service-area {
             background: var(--dark-bg);
             position: relative;
@@ -432,21 +412,14 @@
             font-size: 1.4rem;
             margin-bottom: 1.5rem;
             display: block;
-            position: relative;
-            padding-bottom: 10px;
-            display: inline-block;
         }
         
-        .service-area-highlight::after {
-            content: '';
-            position: absolute;
-            width: 80px;
-            height: 3px;
-            background: var(--gradient);
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            border-radius: 2px;
+        .service-area-subtitle {
+            color: var(--darker-text);
+            max-width: 800px;
+            margin: 0 auto 1.5rem;
+            padding: 0 10px;
+            font-size: 0.9rem;
         }
         
         .service-area-grid {
@@ -510,21 +483,6 @@
             font-size: 1.3rem;
             margin-bottom: 1rem;
             color: var(--primary);
-            position: relative;
-            padding-bottom: 8px;
-            display: inline-block;
-        }
-        
-        .service-area-card h3::after {
-            content: '';
-            position: absolute;
-            width: 50px;
-            height: 3px;
-            background: var(--gradient-accent);
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            border-radius: 2px;
         }
         
         .service-area-card p {
@@ -655,21 +613,6 @@
             font-size: 1.3rem;
             margin-bottom: 0.8rem;
             color: var(--accent);
-            position: relative;
-            padding-bottom: 8px;
-            display: inline-block;
-        }
-        
-        .fear-card h3::after {
-            content: '';
-            position: absolute;
-            width: 50px;
-            height: 3px;
-            background: var(--gradient);
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            border-radius: 2px;
         }
         
         .fear-card p {
@@ -690,20 +633,6 @@
             color: var(--primary);
             margin-bottom: 0.5rem;
             font-size: 1.1rem;
-            position: relative;
-            padding-bottom: 5px;
-            display: inline-block;
-        }
-        
-        .solution-highlight h4::after {
-            content: '';
-            position: absolute;
-            width: 40px;
-            height: 2px;
-            background: var(--gradient-accent);
-            bottom: 0;
-            left: 0;
-            border-radius: 2px;
         }
         
         .solution-highlight p {
@@ -773,21 +702,6 @@
             font-size: 1.2rem;
             margin-bottom: 0.8rem;
             color: var(--primary);
-            position: relative;
-            padding-bottom: 8px;
-            display: inline-block;
-        }
-        
-        .service-card h3::after {
-            content: '';
-            position: absolute;
-            width: 40px;
-            height: 3px;
-            background: var(--gradient-accent);
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            border-radius: 2px;
         }
         
         .service-card p {
@@ -884,21 +798,6 @@
             margin-bottom: 0.7rem;
             color: var(--primary);
             font-size: 1.1rem;
-            position: relative;
-            padding-bottom: 6px;
-            display: inline-block;
-        }
-        
-        .step h3::after {
-            content: '';
-            position: absolute;
-            width: 30px;
-            height: 2px;
-            background: var(--gradient-accent);
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            border-radius: 2px;
         }
         
         .step p {
@@ -955,21 +854,6 @@
             font-size: 1.1rem;
             margin-bottom: 0.8rem;
             color: var(--primary);
-            position: relative;
-            padding-bottom: 6px;
-            display: inline-block;
-        }
-        
-        .benefit-card h3::after {
-            content: '';
-            position: absolute;
-            width: 30px;
-            height: 2px;
-            background: var(--gradient-accent);
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            border-radius: 2px;
         }
         
         .benefit-card p {
@@ -1009,21 +893,6 @@
             font-size: 1.2rem;
             margin-bottom: 0.8rem;
             color: var(--primary);
-            position: relative;
-            padding-bottom: 6px;
-            display: inline-block;
-        }
-        
-        .creative-card h3::after {
-            content: '';
-            position: absolute;
-            width: 40px;
-            height: 3px;
-            background: var(--gradient-accent);
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            border-radius: 2px;
         }
         
         .creative-icon {
@@ -1093,21 +962,6 @@
             font-size: 1rem;
             margin-bottom: 0.6rem;
             color: var(--primary);
-            position: relative;
-            padding-bottom: 4px;
-            display: inline-block;
-        }
-        
-        .business-card h3::after {
-            content: '';
-            position: absolute;
-            width: 25px;
-            height: 2px;
-            background: var(--gradient-accent);
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            border-radius: 2px;
         }
         
         .business-card p {
@@ -1130,20 +984,6 @@
             font-size: 1.4rem;
             margin-bottom: 1rem;
             color: var(--primary);
-            position: relative;
-            padding-bottom: 8px;
-            display: inline-block;
-        }
-        
-        .contact-info h3::after {
-            content: '';
-            position: absolute;
-            width: 60px;
-            height: 3px;
-            background: var(--gradient-accent);
-            bottom: 0;
-            left: 0;
-            border-radius: 2px;
         }
         
         .contact-details {
@@ -1198,20 +1038,7 @@
         .footer-col h3 {
             font-size: 1.1rem;
             margin-bottom: 0.8rem;
-            position: relative;
-            padding-bottom: 0.5rem;
             color: var(--primary);
-        }
-        
-        .footer-col h3::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 30px;
-            height: 3px;
-            background: var(--accent);
-            border-radius: 2px;
         }
         
         .footer-links {
@@ -1352,6 +1179,11 @@
                 font-size: 0.95rem;
             }
             
+            .stat-item {
+                min-width: 100px;
+                padding: 20px 25px;
+            }
+            
             .service-area-grid {
                 flex-direction: row;
                 justify-content: center;
@@ -1432,6 +1264,13 @@
                 transform: translateY(-3px);
             }
             
+            .stat-item:active {
+                transform: translateY(-8px);
+                background: rgba(157, 0, 255, 0.1);
+                border-color: var(--primary);
+                box-shadow: 0 8px 25px rgba(157, 0, 255, 0.2);
+            }
+            
             .footer-grid {
                 grid-template-columns: 1fr 1fr;
                 gap: 1.8rem;
@@ -1466,7 +1305,7 @@
     </style>
 </head>
 <body>
-    <!-- IMPROVED HEADER - Increased size and added hover effects -->
+    <!-- IMPROVED HEADER -->
     <header>
         <div class="container">
             <nav class="navbar">
@@ -1526,7 +1365,7 @@
                         <div class="stat-label">Per WhatsApp Ad</div>
                     </div>
                     <div class="stat-item">
-                        <div class="stat-number">₹2,999</div>
+                        <div class="stat-number">₹4,199</div>
                         <div class="stat-label">Website Price</div>
                     </div>
                 </div>
@@ -1534,7 +1373,7 @@
         </div>
     </section>
 
-    <!-- SERVICE AREA SECTION - Centered cards -->
+    <!-- SERVICE AREA SECTION -->
     <section class="service-area" id="service-area">
         <div class="container">
             <div class="service-area-content">
@@ -1575,7 +1414,7 @@
                 </div>
                 
                 <div style="text-align: center; margin-top: 2rem;">
-                    <h3 style="color: var(--primary); margin-bottom: 1rem; position: relative; padding-bottom: 8px; display: inline-block;">For All Punjab Businesses</h3>
+                    <h3 style="color: var(--primary); margin-bottom: 1rem;">For All Punjab Businesses</h3>
                     <p style="color: var(--darker-text); max-width: 800px; margin: 0 auto 1.5rem;" class="content-text">Big marketing agencies often ignore small cities and local businesses. <span class="hinglish">MBA aapke liye banaya gaya hai!</span> We understand the challenges faced by local businesses in Punjab and provide solutions that work for you.</p>
                     <a href="https://wa.me/917973890562?text=Hello%20and%20welcome%20to%20Moga%20Business%20Hub!%20%F0%9F%91%8B%F0%9F%92%BC%F0%9F%8C%9F%0AWe%E2%80%99re%20excited%20to%20have%20you%20here.%20%F0%9F%98%8A%F0%9F%8C%9F%0AWhether%20you%20want%20to%20promote%20your%20business%20in%20our%20marketing%20group%20%F0%9F%93%A2%F0%9F%92%AC%20or%20need%20a%20professional%20website%20to%20grow%20online%20%F0%9F%8C%90%F0%9F%9A%80%2C%20we%E2%80%99re%20here%20to%20support%20you%20every%20step%20of%20the%20way.%20%F0%9F%A4%9D%E2%9D%A4%0AShare%20your%20message%20anytime%20%E2%80%94%20we%E2%80%99ll%20respond%20shortly%20with%20the%20best%20guidance.%20%F0%9F%93%B2%F0%9F%98%8A%F0%9F%8C%9F" class="cta-button" target="_blank" style="padding: 0.8rem 2rem; font-size: 0.95rem;">
                         <i class="fas fa-rocket"></i> Promote My Business
@@ -1617,7 +1456,7 @@
                         
                         <div class="solution-highlight">
                             <h4>MBA Solution:</h4>
-                            <p class="content-text">We provide <span class="hinglish">affordable marketing solutions</span> starting at just ₹200! <span class="hinglish">Kam budget mein bada marketing!</span> Get a professional website for only ₹2,999.</p>
+                            <p class="content-text">We provide <span class="hinglish">affordable marketing solutions</span> starting at just ₹200! <span class="hinglish">Kam budget mein bada marketing!</span> Get a professional website for only ₹4,199.</p>
                         </div>
                     </div>
                     
@@ -1630,7 +1469,7 @@
                         
                         <div class="solution-highlight">
                             <h4>MBA Solution:</h4>
-                            <p class="content-text">We'll create your <span class="hinglish">professional website at 75% less cost</span> than market price. <span class="hinglish">Online dikhao apna business!</span> Customers will find you easily.</p>
+                            <p class="content-text">We'll create your <span class="hinglish">professional website at 65% less cost</span> than market price. <span class="hinglish">Online dikhao apna business!</span> Customers will find you easily.</p>
                         </div>
                     </div>
                     
@@ -1649,7 +1488,7 @@
                 </div>
                 
                 <div style="text-align: center; margin-top: 2rem;">
-                    <h3 style="color: var(--primary); margin-bottom: 1rem; position: relative; padding-bottom: 8px; display: inline-block;">Don't Let Fear Stop Your Success!</h3>
+                    <h3 style="color: var(--primary); margin-bottom: 1rem;">Don't Let Fear Stop Your Success!</h3>
                     <p style="color: var(--darker-text); max-width: 800px; margin: 0 auto 1.5rem;" class="content-text"><span class="hinglish">Aaj hi decision lein aur apne business ko nayi heights tak le jayein!</span> MBA is here to solve all your marketing problems at affordable prices.</p>
                     <a href="https://wa.me/917973890562?text=Hello%20and%20welcome%20to%20Moga%20Business%20Hub!%20%F0%9F%91%8B%F0%9F%92%BC%F0%9F%8C%9F%0AWe%E2%80%99re%20excited%20to%20have%20you%20here.%20%F0%9F%98%8A%F0%9F%8C%9F%0AWhether%20you%20want%20to%20promote%20your%20business%20in%20our%20marketing%20group%20%F0%9F%93%A2%F0%9F%92%AC%20or%20need%20a%20professional%20website%20to%20grow%20online%20%F0%9F%8C%90%F0%9F%9A%80%2C%20we%E2%80%99re%20here%20to%20support%20you%20every%20step%20of%20the%20way.%20%F0%9F%A4%9D%E2%9D%A4%0AShare%20your%20message%20anytime%20%E2%80%94%20we%E2%80%99ll%20respond%20shortly%20with%20the%20best%20guidance.%20%F0%9F%93%B2%F0%9F%98%8A%F0%9F%8C%9F" class="cta-button" target="_blank" style="padding: 0.8rem 2rem; font-size: 0.95rem;">
                         <i class="fas fa-handshake"></i> Solve My Business Problems
@@ -1683,12 +1522,12 @@
                         <i class="fas fa-laptop-code"></i>
                     </div>
                     <h3>Professional Website</h3>
-                    <p class="content-text">Get a premium website for your business at 75% less than market price. <span class="hinglish">Online dikhao apna business!</span></p>
+                    <p class="content-text">Get a premium website for your business at 65% less than market price. <span class="hinglish">Online dikhao apna business!</span></p>
                     <div class="price-comparison">
                         <span class="old-price">₹12,000 - 15,000</span>
-                        <span class="new-price">₹2,999 Only</span>
+                        <span class="new-price">₹4,199 Only</span>
                     </div>
-                    <div class="savings">Save 75%</div>
+                    <div class="savings">Save 65%</div>
                     <a href="https://wa.me/917973890562?text=Hello%20and%20welcome%20to%20Moga%20Business%20Hub!%20%F0%9F%91%8B%F0%9F%92%BC%F0%9F%8C%9F%0AWe%E2%80%99re%20excited%20to%20have%20you%20here.%20%F0%9F%98%8A%F0%9F%8C%9F%0AWhether%20you%20want%20to%20promote%20your%20business%20in%20our%20marketing%20group%20%F0%9F%93%A2%F0%9F%92%AC%20or%20need%20a%20professional%20website%20to%20grow%20online%20%F0%9F%8C%90%F0%9F%9A%80%2C%20we%E2%80%99re%20here%20to%20support%20you%20every%20step%20of%20the%20way.%20%F0%9F%A4%9D%E2%9D%A4%0AShare%20your%20message%20anytime%20%E2%80%94%20we%E2%80%99ll%20respond%20shortly%20with%20the%20best%20guidance.%20%F0%9F%93%B2%F0%9F%98%8A%F0%9F%8C%9F" class="cta-button" target="_blank">Get Website</a>
                 </div>
                 
@@ -1986,7 +1825,7 @@
                     <h3>Services</h3>
                     <ul class="footer-links">
                         <li><a href="#">WhatsApp Promotion - ₹200</a></li>
-                        <li><a href="#">Website Design - ₹2,999</a></li>
+                        <li><a href="#">Website Design - ₹4,199</a></li>
                         <li><a href="#">Banner Design - ₹499</a></li>
                         <li><a href="#">Creative Taglines - ₹299</a></li>
                     </ul>
