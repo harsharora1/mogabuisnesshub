@@ -25,6 +25,10 @@
             padding: 0;
             box-sizing: border-box;
             font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
         }
         
         html {
@@ -37,6 +41,32 @@
             line-height: 1.6;
             overflow-x: hidden;
             -webkit-tap-highlight-color: transparent;
+        }
+        
+        /* Allow text selection only for specific content elements */
+        .content-text, 
+        .service-card p, 
+        .benefit-card p, 
+        .business-card p, 
+        .creative-card p, 
+        .step p, 
+        .fear-card p, 
+        .solution-highlight p,
+        .service-area-card p, 
+        .contact-info p, 
+        .footer-col p, 
+        .hero p,
+        .section-title p, 
+        .fear-solution-subtitle, 
+        .service-area-subtitle,
+        .contact-details p,
+        .footer-links a,
+        .footer-links li,
+        .copyright p {
+            -webkit-user-select: text;
+            -moz-user-select: text;
+            -ms-user-select: text;
+            user-select: text;
         }
         
         .container {
@@ -376,16 +406,17 @@
             color: var(--dark-text);
         }
         
-        /* SECTION STYLES */
+        /* SECTION STYLES - INCREASED SPACING BETWEEN SECTIONS */
         section {
-            padding: 3rem 0;
+            padding: 4rem 0; /* Increased from 3rem to 4rem */
         }
         
-        /* SERVICE AREA SECTION */
+        /* SERVICE AREA SECTION - Increased bottom padding */
         .service-area {
             background: var(--dark-bg);
             position: relative;
             overflow: hidden;
+            padding-bottom: 4.5rem; /* Added extra bottom padding */
         }
         
         .service-area::before {
@@ -521,11 +552,12 @@
             transform: translateY(-2px);
         }
         
-        /* FEAR & SOLUTION SECTION */
+        /* FEAR & SOLUTION SECTION - Reduced top padding for better spacing */
         .fear-solution {
             background: var(--dark-bg);
             position: relative;
             overflow: hidden;
+            padding-top: 3.5rem; /* Reduced from 4rem to 3.5rem */
         }
         
         .fear-solution::before {
@@ -1281,26 +1313,60 @@
             }
         }
         
-        /* TEXT SELECTION CONTROL */
-        .content-text, .service-card p, .benefit-card p, .business-card p, 
-        .creative-card p, .step p, .fear-card p, .solution-highlight p,
-        .service-area-card p, .contact-info p, .footer-col p, .hero p,
-        .section-title p, .fear-solution-subtitle, .service-area-subtitle {
-            -webkit-user-select: text;
-            -moz-user-select: text;
-            -ms-user-select: text;
-            user-select: text;
-        }
-        
-        .stats, .stat-item, .stat-number, .stat-label, .city-tag, 
-        .service-card h3, .benefit-card h3, .business-card h3, 
-        .step h3, .creative-card h3, .fear-card h3, .solution-highlight h4,
-        .service-area-card h3, .contact-info h3, .footer-col h3, .hero h1,
-        .hindi-tagline, .section-title h2, .fear-solution h2, .service-area h2 {
+        /* Prevent copying for all other elements */
+        h1, h2, h3, h4, h5, h6,
+        .logo, .logo-main, .logo-short,
+        .nav-links a,
+        .menu-toggle,
+        .stat-item, .stat-number, .stat-label,
+        .city-tag,
+        .price, .old-price, .new-price, .savings,
+        .section-title h2,
+        .service-area-highlight,
+        .service-card h3,
+        .step h3,
+        .benefit-card h3,
+        .creative-card h3,
+        .fear-card h3,
+        .solution-highlight h4,
+        .business-card h3,
+        .contact-info h3,
+        .footer-col h3,
+        .hero h1,
+        .hindi-tagline,
+        .hinglish,
+        .cta-button, .phone-button, .whatsapp-button,
+        .area-icon, .service-icon, .benefit-icon, .business-icon, .creative-icon, .fear-icon, .contact-icon,
+        .social-links a {
             -webkit-user-select: none;
             -moz-user-select: none;
             -ms-user-select: none;
             user-select: none;
+            cursor: default;
+        }
+        
+        /* Allow selection for buttons text */
+        .cta-button, .phone-button, .whatsapp-button {
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        
+        /* Make links selectable for screen readers but not for regular copying */
+        a {
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        
+        /* Exception: Allow selection in text areas for forms if any */
+        input, textarea {
+            -webkit-user-select: text;
+            -moz-user-select: text;
+            -ms-user-select: text;
+            user-select: text;
         }
     </style>
 </head>
@@ -1912,6 +1978,28 @@
 
         // Fix for mobile text selection issues
         document.addEventListener('touchstart', function() {}, {passive: true});
+        
+        // Prevent text selection on certain elements
+        document.addEventListener('contextmenu', function(e) {
+            if (e.target.nodeName === 'IMG' || e.target.classList.contains('logo') || 
+                e.target.classList.contains('section-title') || e.target.tagName === 'H1' || 
+                e.target.tagName === 'H2' || e.target.tagName === 'H3' || e.target.tagName === 'H4') {
+                e.preventDefault();
+                return false;
+            }
+        });
+        
+        // Prevent dragging of images and icons
+        document.addEventListener('dragstart', function(e) {
+            if (e.target.nodeName === 'IMG' || e.target.classList.contains('logo') || 
+                e.target.classList.contains('area-icon') || e.target.classList.contains('service-icon') ||
+                e.target.classList.contains('benefit-icon') || e.target.classList.contains('business-icon') ||
+                e.target.classList.contains('creative-icon') || e.target.classList.contains('fear-icon') ||
+                e.target.classList.contains('contact-icon') || e.target.classList.contains('step-number')) {
+                e.preventDefault();
+                return false;
+            }
+        });
     </script>
 </body>
 </html>
