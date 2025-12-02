@@ -205,6 +205,347 @@
             transform: scale(1.1);
         }
         
+        /* NEW: INSTANT REACH BANNER SECTION */
+        .instant-reach {
+            background: linear-gradient(135deg, rgba(157, 0, 255, 0.15), rgba(255, 107, 53, 0.15));
+            border-bottom: 3px solid var(--primary);
+            border-top: 3px solid var(--accent);
+            padding: 1.5rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 2.5rem; /* Added margin for spacing */
+        }
+        
+        .instant-reach::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="rgba(157,0,255,0.05)"/><path d="M0,0 L0,100 L100,100 Z" fill="rgba(255,107,53,0.05)"/></svg>');
+            z-index: 0;
+        }
+        
+        .instant-reach-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .reach-highlight {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 0.8rem;
+        }
+        
+        .reach-number {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--highlight);
+            text-shadow: 0 0 10px rgba(255, 209, 102, 0.5);
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        .reach-text {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--primary);
+        }
+        
+        .reach-subtitle {
+            font-size: 0.95rem;
+            color: var(--darker-text);
+            max-width: 600px;
+            margin: 0 auto 1rem;
+            line-height: 1.4;
+        }
+        
+        .reach-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--gradient-accent);
+            color: white;
+            padding: 0.7rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+        }
+        
+        .reach-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
+            background: linear-gradient(135deg, #FF8E5C, #FF6B35);
+        }
+        
+        /* NEW: WEBSITE FOMO SECTION */
+        .website-fomo {
+            background: linear-gradient(135deg, rgba(157, 0, 255, 0.08), rgba(255, 107, 53, 0.08));
+            padding: 3rem 0; /* Reduced from 4rem to 3rem */
+            position: relative;
+            overflow: hidden;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 1.5rem; /* Added margin for spacing */
+        }
+        
+        .website-fomo::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(157, 0, 255, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(255, 107, 53, 0.05) 0%, transparent 50%);
+            z-index: 0;
+        }
+        
+        .website-fomo-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+        
+        .fomo-title {
+            font-size: 1.5rem; /* Reduced from 1.8rem to 1.5rem */
+            margin-bottom: 0.6rem; /* Reduced from 0.8rem */
+            color: var(--highlight);
+            position: relative;
+            display: inline-block;
+        }
+        
+        .fomo-title::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            background: var(--gradient-accent);
+            bottom: -5px;
+            left: 0;
+            border-radius: 2px;
+        }
+        
+        .fomo-subtitle {
+            font-size: 1rem; /* Reduced from 1.1rem to 1rem */
+            margin-bottom: 1.2rem; /* Reduced from 1.5rem */
+            color: var(--primary);
+            font-weight: 600;
+        }
+        
+        .fomo-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            margin: 1.5rem 0; /* Reduced from 2rem */
+        }
+        
+        @media (min-width: 768px) {
+            .fomo-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        
+        .fomo-card {
+            background: var(--dark-card);
+            border-radius: 12px;
+            padding: 1.5rem 1rem; /* Reduced from 1.8rem 1.2rem */
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+            border: 1px solid #333;
+            text-align: left;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .fomo-card.bad {
+            border-left: 5px solid #FF4757;
+        }
+        
+        .fomo-card.good {
+            border-left: 5px solid #2ED573;
+        }
+        
+        .fomo-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+        }
+        
+        .fomo-icon {
+            width: 45px; /* Reduced from 50px */
+            height: 45px; /* Reduced from 50px */
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 0.8rem; /* Reduced from 1rem */
+            font-size: 1.2rem; /* Reduced from 1.4rem */
+            transition: all 0.3s ease;
+        }
+        
+        .bad .fomo-icon {
+            background: rgba(255, 71, 87, 0.2);
+            color: #FF4757;
+        }
+        
+        .good .fomo-icon {
+            background: rgba(46, 213, 115, 0.2);
+            color: #2ED573;
+        }
+        
+        .fomo-card h3 {
+            font-size: 1.1rem; /* Reduced from 1.2rem */
+            margin-bottom: 0.6rem; /* Reduced from 0.8rem */
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .bad h3 {
+            color: #FF4757;
+        }
+        
+        .good h3 {
+            color: #2ED573;
+        }
+        
+        .fomo-card p {
+            color: var(--darker-text);
+            font-size: 0.9rem; /* Reduced from 0.95rem */
+            margin-bottom: 0.6rem; /* Reduced from 0.8rem */
+            line-height: 1.5;
+        }
+        
+        .fomo-highlight {
+            background: linear-gradient(135deg, rgba(157, 0, 255, 0.1), rgba(255, 107, 53, 0.1));
+            padding: 1.2rem; /* Reduced from 1.5rem */
+            border-radius: 10px;
+            margin: 1.5rem 0; /* Reduced from 2rem */
+            border: 2px solid var(--primary);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .fomo-highlight::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="rgba(157,0,255,0.05)"/></svg>');
+            z-index: 0;
+        }
+        
+        .fomo-highlight-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .fomo-urgency {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px; /* Reduced from 10px */
+            margin-bottom: 0.8rem; /* Reduced from 1rem */
+            flex-wrap: wrap;
+        }
+        
+        .urgency-timer {
+            background: var(--gradient-accent);
+            color: white;
+            padding: 6px 12px; /* Reduced from 8px 16px */
+            border-radius: 50px;
+            font-weight: 600; /* Reduced from 700 */
+            font-size: 0.9rem; /* Reduced from 1.1rem */
+            animation: pulse 1.5s infinite;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px; /* Reduced from 6px */
+        }
+        
+        .urgency-text {
+            font-size: 1rem; /* Reduced from 1.2rem */
+            font-weight: 600;
+            color: var(--highlight);
+        }
+        
+        .price-comparison-large {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 12px; /* Reduced from 15px */
+            margin: 1rem 0; /* Reduced from 1.5rem */
+            flex-wrap: wrap;
+        }
+        
+        .old-price-large {
+            text-decoration: line-through;
+            color: #777;
+            font-size: 1.2rem; /* Reduced from 1.4rem */
+            position: relative;
+        }
+        
+        .new-price-large {
+            font-size: 1.8rem; /* Reduced from 2.2rem */
+            font-weight: 800;
+            color: var(--accent);
+            text-shadow: 0 0 10px rgba(255, 107, 53, 0.3);
+        }
+        
+        .savings-badge {
+            background: var(--gradient-accent);
+            color: white;
+            padding: 6px 12px; /* Reduced from 8px 16px */
+            border-radius: 50px;
+            font-weight: 600; /* Reduced from 700 */
+            font-size: 0.9rem; /* Reduced from 1rem */
+            display: inline-block;
+            margin-top: 5px;
+        }
+        
+        .website-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px; /* Reduced from 10px */
+            background: var(--gradient);
+            color: white;
+            padding: 0.8rem 1.8rem; /* Reduced from 0.9rem 2rem */
+            border-radius: 50px;
+            font-weight: 600; /* Reduced from 700 */
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(157, 0, 255, 0.3);
+            font-size: 1rem; /* Reduced from 1.1rem */
+            margin-top: 0.8rem; /* Reduced from 1rem */
+        }
+        
+        .website-cta:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 6px 20px rgba(157, 0, 255, 0.4);
+            background: linear-gradient(135deg, #7A00CC, #9D00FF);
+        }
+        
+        .fomo-note {
+            margin-top: 1rem; /* Reduced from 1.5rem */
+            color: var(--darker-text);
+            font-size: 0.85rem; /* Reduced from 0.9rem */
+            font-style: italic;
+        }
+        
         /* Section title styles with underline - ONLY FOR MAIN SECTION HEADLINES */
         .section-title {
             text-align: center;
@@ -1188,6 +1529,39 @@
                 display: none;
             }
             
+            .instant-reach {
+                padding: 2rem 0;
+            }
+            
+            .reach-highlight {
+                gap: 15px;
+            }
+            
+            .reach-number {
+                font-size: 2.5rem;
+            }
+            
+            .reach-text {
+                font-size: 1.5rem;
+            }
+            
+            .reach-subtitle {
+                font-size: 1.05rem;
+            }
+            
+            /* Desktop adjustments for Website FOMO section */
+            .website-fomo {
+                padding: 3.5rem 0; /* Reduced from 4.5rem */
+            }
+            
+            .fomo-title {
+                font-size: 1.8rem; /* Reduced from 2.2rem */
+            }
+            
+            .fomo-subtitle {
+                font-size: 1.1rem; /* Reduced from 1.3rem */
+            }
+            
             .cta-button, .phone-button, .whatsapp-button {
                 padding: 0.8rem 1.8rem;
                 font-size: 0.95rem;
@@ -1245,6 +1619,31 @@
                 margin: 0 3rem;
             }
             
+            .instant-reach {
+                padding: 2.5rem 0;
+            }
+            
+            .reach-number {
+                font-size: 3rem;
+            }
+            
+            .reach-text {
+                font-size: 1.8rem;
+            }
+            
+            /* Large desktop adjustments for Website FOMO section */
+            .website-fomo {
+                padding: 4rem 0; /* Reduced from 5rem */
+            }
+            
+            .fomo-title {
+                font-size: 2rem; /* Reduced from 2.5rem */
+            }
+            
+            .fomo-subtitle {
+                font-size: 1.2rem; /* Reduced from 1.5rem */
+            }
+            
             .service-area-grid {
                 gap: 2.5rem;
             }
@@ -1264,17 +1663,18 @@
         /* IMPROVED MOBILE INTERACTIONS */
         @media (max-width: 767px) {
             .service-card, .step, .benefit-card, .business-card, 
-            .creative-card, .service-area-card, .fear-card {
+            .creative-card, .service-area-card, .fear-card, .fomo-card {
                 transition: none;
             }
             
             .service-card:active, .step:active, .benefit-card:active, 
             .business-card:active, .creative-card:active,
-            .service-area-card:active, .fear-card:active {
+            .service-area-card:active, .fear-card:active, .fomo-card:active {
                 transform: translateY(-5px);
             }
             
-            .cta-button:active, .whatsapp-button:active, .phone-button:active {
+            .cta-button:active, .whatsapp-button:active, .phone-button:active,
+            .reach-cta:active, .website-cta:active {
                 transform: translateY(-3px);
             }
             
@@ -1353,13 +1753,108 @@
                         <div class="stat-label">Local Members</div>
                     </div>
                     <div class="stat-item">
-                        <div class="stat-number">₹200</div>
+                        <div class="stat-number">₹249</div> <!-- Changed from ₹200 to ₹249 -->
                         <div class="stat-label">Per WhatsApp Ad</div>
                     </div>
+                   <div class="stat-item">
+                        <div class="stat-number">₹299</div>
+                        <div class="stat-label">Instagram Posts</div>
+                    </div>
+
                     <div class="stat-item">
                         <div class="stat-number">₹4,199</div>
                         <div class="stat-label">Website Price</div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW: INSTANT REACH SECTION -->
+    <section class="instant-reach">
+        <div class="container">
+            <div class="instant-reach-content">
+                <div class="reach-highlight">
+                    <div class="reach-number">1200+</div>
+                    <div class="reach-text">Local Members Tak Pahunchayein!</div>
+                </div>
+                <p class="reach-subtitle">Moga ke 1200+ active WhatsApp group members tak apna business promote karein. <span class="hinglish">Seconds mein pahunchayein, results dekhein!</span></p>
+                <a href="https://wa.me/917973890562?text=Hello%20and%20welcome%20to%20Moga%20Business%20Hub!%20%F0%9F%91%8B%F0%9F%92%BC%F0%9F%8C%9F%0AWe%E2%80%99re%20excited%20to%20have%20you%20here.%20%F0%9F%98%8A%F0%9F%8C%9F%0AWhether%20you%20want%20to%20promote%20your%20business%20in%20our%20marketing%20group%20%F0%9F%93%A2%F0%9F%92%AC%20or%20need%20a%20professional%20website%20to%20grow%20online%20%F0%9F%8C%90%F0%9F%9A%80%2C%20we%E2%80%99re%20here%20to%20support%20you%20every%20step%20of%20the%20way.%20%F0%9F%A4%9D%E2%9D%A4%0AShare%20your%20message%20anytime%20%E2%80%94%20we%E2%80%99ll%20respond%20shortly%20with%20the%20best%20guidance.%20%F0%9F%93%B2%F0%9F%98%8A%F0%9F%8C%9F" class="reach-cta" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Aaj Hi Promote Karein
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW: WEBSITE FOMO SECTION -->
+    <section class="website-fomo">
+        <div class="container">
+            <div class="website-fomo-content">
+                <h2 class="fomo-title">Website Nahi Hai? Business Piche Reh Gaya!</h2>
+                <p class="fomo-subtitle"><span class="hinglish">Aaj ke digital zamane mein, website ke bina business kaise chalega?</span></p>
+                
+                <div class="fomo-grid">
+                    <div class="fomo-card bad">
+                        <div class="fomo-icon">
+                            <i class="fas fa-times-circle"></i>
+                        </div>
+                        <h3><i class="fas fa-sad-tear"></i> Bina Website Ke Business</h3>
+                        <p><span class="hinglish">Customers online search karte hain, aapka business nahi dikhega!</span> 80% customers online search karke hi business ko contact karte hain.</p>
+                        <p><span class="hinglish">"Mera business chhota hai" soch rahe ho?</span> Har bada business ek chhote se hi start hua tha!</p>
+                    </div>
+                    
+                    <div class="fomo-card good">
+                        <div class="fomo-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <h3><i class="fas fa-grin-stars"></i> Website Ke Saath Business</h3>
+                        <p><span class="hinglish">24/7 online presence!</span> Aap so rahe ho, aapka website aapke liye kaam kar raha hai.</p>
+                        <p><span class="hinglish">Professional image banayein!</span> Customers ko trust aayega, business credibility badhegi.</p>
+                        <p><span class="hinglish">Naye cities se bhi customers milein!</span> Website se aapka business pure Punjab mein visible ho jayega.</p>
+                    </div>
+                </div>
+                
+                <div class="fomo-highlight">
+                    <div class="fomo-highlight-content">
+                        <div class="fomo-urgency">
+                            <div class="urgency-timer">
+                                <i class="fas fa-clock"></i> Limited Time Offer
+                            </div>
+                            <div class="urgency-text">Aaj Hi Website Banayein!</div>
+                        </div>
+                        
+                        <h3 style="color: var(--highlight); margin-bottom: 1rem; font-size: 1.1rem;">Market Price ₹12,000-15,000 - <span class="hinglish">MBA Special Offer</span></h3>
+                        
+                        <div class="price-comparison-large">
+                            <div class="old-price-large">₹12,000</div>
+                            <div style="color: var(--darker-text); font-size: 1.2rem;">↓</div>
+                            <div class="new-price-large">₹4,199 Only!</div>
+                        </div>
+                        
+                        <div class="savings-badge">65% Bachat!</div>
+                        
+                        <p style="margin: 1rem 0; color: var(--dark-text); font-size: 1rem;">
+                            <span class="hinglish">Aapka ek decision aapke business ki future change kar sakta hai!</span> <br>
+                            WhatsApp promotion se zyada effective hai website - <span class="hinglish">24/7 marketing machine!</span>
+                        </p>
+                        
+                        <a href="https://wa.me/917973890562?text=Hello%20MBA%20Team%2C%20I%20want%20to%20get%20a%20professional%20website%20for%20my%20business%20at%20%E2%82%B94%2C199.%20Please%20guide%20me%20with%20the%20next%20steps." class="website-cta" target="_blank">
+                            <i class="fas fa-laptop-code"></i> Aaj Hi Website Order Karein - ₹4,199
+                        </a>
+                        
+                        <p class="fomo-note">
+                            <i class="fas fa-exclamation-circle"></i> <span class="hinglish">Offer limited hai!</span> First 10 businesses ke liye free business card design bhi. Pehle aao, pehle pao!
+                        </p>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 1.5rem;">
+                    <h3 style="color: var(--primary); margin-bottom: 0.8rem; font-size: 1.1rem;">Kya Aapka Competition Already Online Hai?</h3>
+                    <p style="color: var(--darker-text); max-width: 800px; margin: 0 auto; font-size: 0.9rem;">
+                        <span class="hinglish">Jab tak aap soch rahe ho, aapka competitor website bana chuka hoga!</span> 
+                        Aaj ke time mein digital presence business ki zaroorat hai, luxury nahi. 
+                        <span class="hinglish">Kal nahi, aaj hi decision lein!</span>
+                    </p>
                 </div>
             </div>
         </div>
@@ -1448,7 +1943,7 @@
                         
                         <div class="solution-highlight">
                             <h4>MBA Solution:</h4>
-                            <p class="content-text">We provide <span class="hinglish">affordable marketing solutions</span> starting at just ₹200! <span class="hinglish">Kam budget mein bada marketing!</span> Get a professional website for only ₹4,199.</p>
+                            <p class="content-text">We provide <span class="hinglish">affordable marketing solutions</span> starting at just ₹249! <span class="hinglish">Kam budget mein bada marketing!</span> Get a professional website for only ₹4,199.</p>
                         </div>
                     </div>
                     
@@ -1505,7 +2000,7 @@
                     </div>
                     <h3>WhatsApp Promotion</h3>
                     <p class="content-text">Reach 1200+ local customers instantly with your business ads in our WhatsApp group. <span class="hinglish">Business ko de do nayi pehchaan!</span></p>
-                    <div class="price">₹200 per ad</div>
+                    <div class="price">₹249 per ad</div> <!-- Changed from ₹200 to ₹249 -->
                     <a href="https://wa.me/917973890562?text=Hello%20and%20welcome%20to%20Moga%20Business%20Hub!%20%F0%9F%91%8B%F0%9F%92%BC%F0%9F%8C%9F%0AWe%E2%80%99re%20excited%20to%20have%20you%20here.%20%F0%9F%98%8A%F0%9F%8C%9F%0AWhether%20you%20want%20to%20promote%20your%20business%20in%20our%20marketing%20group%20%F0%9F%93%A2%F0%9F%92%AC%20or%20need%20a%20professional%20website%20to%20grow%20online%20%F0%9F%8C%90%F0%9F%9A%80%2C%20we%E2%80%99re%20here%20to%20support%20you%20every%20step%20of%20the%20way.%20%F0%9F%A4%9D%E2%9D%A4%0AShare%20your%20message%20anytime%20%E2%80%94%20we%E2%80%99ll%20respond%20shortly%20with%20the%20best%20guidance.%20%F0%9F%93%B2%F0%9F%98%8A%F0%9F%8C%9F" class="cta-button" target="_blank">Promote Now</a>
                 </div>
                 
@@ -1631,7 +2126,7 @@
                     </div>
                     <h3>Creative Taglines</h3>
                     <p class="content-text"><span class="hinglish">Business ke liye catchy taglines</span> that make you stand out from competition</p>
-                    <div class="price">Starting at ₹299</div>
+                    <div class="price">Starting at ₹199</div>
                     <a href="https://wa.me/917973890562?text=Hello%20and%20welcome%20to%20Moga%20Business%20Hub!%20%F0%9F%91%8B%F0%9F%92%BC%F0%9F%8C%9F%0AWe%E2%80%99re%20excited%20to%20have%20you%20here.%20%F0%9F%98%8A%F0%9F%8C%9F%0AWhether%20you%20want%20to%20promote%20your%20business%20in%20our%20marketing%20group%20%F0%9F%93%A2%F0%9F%92%AC%20or%20need%20a%20professional%20website%20to%20grow%20online%20%F0%9F%8C%90%F0%9F%9A%80%2C%20we%E2%80%99re%20here%20to%20support%20you%20every%20step%20of%20the%20way.%20%F0%9F%A4%9D%E2%9D%A4%0AShare%20your%20message%20anytime%20%E2%80%94%20we%E2%80%99ll%20respond%20shortly%20with%20the%20best%20guidance.%20%F0%9F%93%B2%F0%9F%98%8A%F0%9F%8C%9F" class="cta-button" target="_blank">Get Tagline</a>
                 </div>
                 
@@ -1641,7 +2136,7 @@
                     </div>
                     <h3>Instagram Bio & Posts</h3>
                     <p class="content-text"><span class="hinglish">Instagram ke liye attractive bio aur posts</span> that attract more followers</p>
-                    <div class="price">Starting at ₹399</div>
+                    <div class="price">Starting at ₹299</div>
                     <a href="https://wa.me/917973890562?text=Hello%20and%20welcome%20to%20Moga%20Business%20Hub!%20%F0%9F%91%8B%F0%9F%92%BC%F0%9F%8C%9F%0AWe%E2%80%99re%20excited%20to%20have%20you%20here.%20%F0%9F%98%8A%F0%9F%8C%9F%0AWhether%20you%20want%20to%20promote%20your%20business%20in%20our%20marketing%20group%20%F0%9F%93%A2%F0%9F%92%AC%20or%20need%20a%20professional%20website%20to%20grow%20online%20%F0%9F%8C%90%F0%9F%9A%80%2C%20we%E2%80%99re%20here%20to%20support%20you%20every%20step%20of%20the%20way.%20%F0%9F%A4%9D%E2%9D%A4%0AShare%20your%20message%20anytime%20%E2%80%94%20we%E2%80%99ll%20respond%20shortly%20with%20the%20best%20guidance.%20%F0%9F%93%B2%F0%9F%98%8A%F0%9F%8C%9F" class="cta-button" target="_blank">Get Bio</a>
                 </div>
                 
@@ -1651,7 +2146,7 @@
                     </div>
                     <h3>Content Writing</h3>
                     <p class="content-text"><span class="hinglish">Business ke liye professional content</span> for websites, social media, and ads</p>
-                    <div class="price">Starting at ₹499</div>
+                    <div class="price">Starting at ₹399</div>
                     <a href="https://wa.me/917973890562?text=Hello%20and%20welcome%20to%20Moga%20Business%20Hub!%20%F0%9F%91%8B%F0%9F%92%BC%F0%9F%8C%9F%0AWe%E2%80%99re%20excited%20to%20have%20you%20here.%20%F0%9F%98%8A%F0%9F%8C%9F%0AWhether%20you%20want%20to%20promote%20your%20business%20in%20our%20marketing%20group%20%F0%9F%93%A2%F0%9F%92%AC%20or%20need%20a%20professional%20website%20to%20grow%20online%20%F0%9F%8C%90%F0%9F%9A%80%2C%20we%E2%80%99re%20here%20to%20support%20you%20every%20step%20of%20the%20way.%20%F0%9F%A4%9D%E2%9D%A4%0AShare%20your%20message%20anytime%20%E2%80%94%20we%E2%80%99ll%20respond%20shortly%20with%20the%20best%20guidance.%20%F0%9F%93%B2%F0%9F%98%8A%F0%9F%8C%9F" class="cta-button" target="_blank">Get Content</a>
                 </div>
             </div>
@@ -1816,7 +2311,7 @@
                 <div class="footer-col">
                     <h3>Services</h3>
                     <ul class="footer-links">
-                        <li><a href="#">WhatsApp Promotion - ₹200</a></li>
+                        <li><a href="#">WhatsApp Promotion - ₹249</a></li> <!-- Changed from ₹200 to ₹249 -->
                         <li><a href="#">Website Design - ₹4,199</a></li>
                         <li><a href="#">Banner Design - ₹499</a></li>
                         <li><a href="#">Creative Taglines - ₹299</a></li>
@@ -1895,7 +2390,7 @@
         }, observerOptions);
         
         // Observe elements for animation
-        document.querySelectorAll('.service-card, .step, .benefit-card, .business-card, .creative-card, .service-area-card, .fear-card').forEach(el => {
+        document.querySelectorAll('.service-card, .step, .benefit-card, .business-card, .creative-card, .service-area-card, .fear-card, .fomo-card').forEach(el => {
             el.style.opacity = '0';
             el.style.transform = 'translateY(20px)';
             el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
