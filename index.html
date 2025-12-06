@@ -648,7 +648,7 @@
             box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
         }
         
-        /* HERO SECTION */
+        /* HERO SECTION - UPDATED WITH SMALL CENTERED IMAGE */
         .hero {
             padding: 2.5rem 0;
             background: var(--dark-card);
@@ -669,6 +669,24 @@
             font-size: 1.9rem;
             margin-bottom: 0.8rem;
             line-height: 1.3;
+        }
+        
+        /* NEW: Small centered image in hero section */
+        .hero-image-small {
+            display: block;
+            margin: 1rem auto;
+            max-width: 200px; /* Small size */
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            border: 2px solid rgba(157, 0, 255, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .hero-image-small:hover {
+            transform: scale(1.03);
+            box-shadow: 0 8px 25px rgba(157, 0, 255, 0.4);
         }
         
         .hero p {
@@ -1485,6 +1503,69 @@
             color: var(--highlight);
         }
         
+        /* NEW: IMAGE STYLES */
+        .business-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin: 1rem 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            border: 2px solid rgba(157, 0, 255, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .business-image:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 25px rgba(157, 0, 255, 0.4);
+        }
+        
+        .small-image {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+            margin: 0.5rem 0;
+            filter: drop-shadow(0 3px 5px rgba(0,0,0,0.3));
+        }
+        
+        .domain-hosting-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, #2ED573, #1ABC9C);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-weight: 600;
+            margin: 10px 0;
+            font-size: 0.9rem;
+            box-shadow: 0 3px 10px rgba(46, 213, 115, 0.3);
+        }
+        
+        .included-features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin: 1rem 0;
+        }
+        
+        .feature-badge {
+            background: rgba(157, 0, 255, 0.15);
+            color: var(--primary);
+            padding: 6px 12px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            border: 1px solid rgba(157, 0, 255, 0.3);
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .feature-badge i {
+            color: var(--accent);
+        }
+        
         /* DESKTOP STYLES - Fixed navigation alignment */
         @media (min-width: 768px) {
             .container {
@@ -1656,6 +1737,15 @@
                 grid-template-columns: 2fr 1fr 1fr 1fr;
                 gap: 2rem;
             }
+            
+            .business-image {
+                height: 250px;
+            }
+            
+            /* Desktop adjustments for hero image */
+            .hero-image-small {
+                max-width: 250px; /* Slightly larger on desktop */
+            }
         }
         
         /* LARGE DESKTOP STYLES */
@@ -1712,6 +1802,15 @@
             .creative-grid {
                 grid-template-columns: repeat(3, 1fr);
             }
+            
+            .business-image {
+                height: 280px;
+            }
+            
+            /* Large desktop adjustments for hero image */
+            .hero-image-small {
+                max-width: 280px; /* Slightly larger on large desktop */
+            }
         }
         
         /* IMPROVED MOBILE INTERACTIONS */
@@ -1746,6 +1845,10 @@
             
             .footer-col:first-child {
                 grid-column: 1 / 3;
+            }
+            
+            .business-image {
+                height: 180px;
             }
         }
     </style>
@@ -1786,9 +1889,13 @@
         <div class="container">
             <div class="hero-content">
                 <h1>Apna Business Badhayein with MBA</h1>
+                
+                <!-- NEW: Small centered image added here -->
+                <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Business Growth with MBA" class="hero-image-small">
+                
                 <div class="hindi-tagline">Moga ke 1200+ logo tak pahunchein - Business ho jayega hit!</div>
                 <p class="content-text">Promote your business to 1200+ local customers through our WhatsApp group. Get a professional website to showcase your business online.</p>
-                
+                                
                 <div class="hero-buttons">
                     <a href="https://chat.whatsapp.com/your-group-link" class="whatsapp-button" target="_blank">
                         <i class="fab fa-whatsapp"></i> Join Our Group
@@ -1820,7 +1927,7 @@
                     </div>
                     <div class="stat-item">
                         <div class="stat-number">₹5,099</div>
-                        <div class="stat-label">Website + Free Domain</div>
+                        <div class="stat-label">Website + Free Domain & Hosting </div>
                     </div>
                 </div>
             </div>
@@ -1835,7 +1942,15 @@
                     <div class="reach-number">1200+</div>
                     <div class="reach-text">Local Members Tak Pahunchayein!</div>
                 </div>
-                <p class="reach-subtitle">Moga ke 1200+ active WhatsApp group members tak apna business promote karein. <span class="hinglish">Seconds mein pahunchayein, results dekhein!</span></p>
+                <p class="reach-subtitle">Moga ke 1200+ active WhatsApp group members tak apna business promote karein. <span class="hinglish">Seconds mein pahunchayein, results dekhein!</span> Aur sath mein website bhi banayein free domain aur hosting ke sath!</p>
+                
+                <div class="included-features">
+                    <span class="feature-badge"><i class="fas fa-check-circle"></i> Free Domain Name</span>
+                    <span class="feature-badge"><i class="fas fa-check-circle"></i> Free Web Hosting</span>
+                    <span class="feature-badge"><i class="fas fa-check-circle"></i> Free SSL Certificate</span>
+                    <span class="feature-badge"><i class="fas fa-check-circle"></i> Professional Design</span>
+                </div>
+                
                 <a href="https://wa.me/916239648633?text=Hello%20and%20welcome%20to%20Moga%20Business%20Hub!%20%F0%9F%91%8B%F0%9F%92%BC%F0%9F%8C%9F%0AWe%E2%80%99re%20excited%20to%20have%20you%20here.%20%F0%9F%98%8A%F0%9F%8C%9F%0AWhether%20you%20want%20to%20promote%20your%20business%20in%20our%20marketing%20group%20%F0%9F%93%A2%F0%9F%92%AC%20or%20need%20a%20professional%20website%20to%20grow%20online%20%F0%9F%8C%90%F0%9F%9A%80%2C%20we%E2%80%99re%20here%20to%20support%20you%20every%20step%20of%20the%20way.%20%F0%9F%A4%9D%E2%9D%A4%0AShare%20your%20message%20anytime%20%E2%80%94%20we%E2%80%99ll%20respond%20shortly%20with%20the%20best%20guidance.%20%F0%9F%93%B2%F0%9F%98%8A%F0%9F%8C%9F" class="reach-cta" target="_blank">
                     <i class="fab fa-whatsapp"></i> Aaj Hi Promote Karein
                 </a>
@@ -1858,6 +1973,8 @@
                         <h3><i class="fas fa-sad-tear"></i> Bina Website Ke Business</h3>
                         <p><span class="hinglish">Customers online search karte hain, aapka business nahi dikhega!</span> 80% customers online search karke hi business ko contact karte hain.</p>
                         <p><span class="hinglish">"Mera business chhota hai" soch rahe ho?</span> Har bada business ek chhote se hi start hua tha!</p>
+                        
+                        <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Business struggling without website" class="business-image">
                     </div>
                     
                     <div class="fomo-card good">
@@ -1868,6 +1985,8 @@
                         <p><span class="hinglish">24/7 online presence!</span> Aap so rahe ho, aapka website aapke liye kaam kar raha hai.</p>
                         <p><span class="hinglish">Professional image banayein!</span> Customers ko trust aayega, business credibility badhegi.</p>
                         <p><span class="hinglish">Naye cities se bhi customers milein!</span> Website se aapka business pure Punjab mein visible ho jayega.</p>
+                        
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Business success with website" class="business-image">
                     </div>
                 </div>
                 
@@ -1880,7 +1999,7 @@
                             <div class="urgency-text">Aaj Hi Website Banayein!</div>
                         </div>
                         
-                        <h3 style="color: var(--highlight); margin-bottom: 1rem; font-size: 1.1rem;">Market Price ₹15,000 - <span class="hinglish">MBA Special Offer</span></h3>
+                        <h3 style="color: var(--highlight); margin-bottom: 1rem; font-size: 1.1rem;">Market Price ₹15,000 - <span class="hinglish">MBA Special Offer (Free Domain + Hosting Included)</span></h3>
                         
                         <div class="price-comparison-large">
                             <div class="old-price-large">₹15,000</div>
@@ -1890,18 +2009,32 @@
                         
                         <div class="savings-badge">66% Bachat!</div>
                         
+                        <div class="domain-hosting-badge">
+                            <i class="fas fa-globe"></i>
+                            <span>FREE Domain & Hosting Included!</span>
+                        </div>
+                        
+                        <div class="included-features">
+                            <span class="feature-badge"><i class="fas fa-check"></i> Free Domain (1 Year)</span>
+                            <span class="feature-badge"><i class="fas fa-check"></i> Free Web Hosting (1 Year)</span>
+                            <span class="feature-badge"><i class="fas fa-check"></i> Free SSL Certificate</span>
+                            <span class="feature-badge"><i class="fas fa-check"></i> Professional Design</span>
+                            <span class="feature-badge"><i class="fas fa-check"></i> Mobile Responsive</span>
+                            <span class="feature-badge"><i class="fas fa-check"></i> Contact Form</span>
+                        </div>
+                        
                         <p style="margin: 1rem 0; color: var(--dark-text); font-size: 1rem;">
-                            <span class="hinglish">✅ FREE DOMAIN NAME INCLUDED!</span> <br>
+                            <span class="hinglish">✅ FREE DOMAIN & HOSTING INCLUDED!</span> <br>
                             <span class="hinglish">Aapka ek decision aapke business ki future change kar sakta hai!</span> <br>
                             WhatsApp promotion se zyada effective hai website - <span class="hinglish">24/7 marketing machine!</span>
                         </p>
                         
-                        <a href="https://wa.me/916239648633?text=Hello%20MBA%20Team%2C%20I%20want%20to%20get%20a%20professional%20website%20for%20my%20business%20at%20%E2%82%B95%2C099%20with%20free%20domain%20name.%20Please%20guide%20me%20with%20the%20next%20steps." class="website-cta" target="_blank">
+                        <a href="https://wa.me/916239648633?text=Hello%20MBA%20Team%2C%20I%20want%20to%20get%20a%20professional%20website%20for%20my%20business%20at%20%E2%82%B95%2C099%20with%20free%20domain%20and%20hosting.%20Please%20guide%20me%20with%20the%20next%20steps." class="website-cta" target="_blank">
                             <i class="fas fa-laptop-code"></i> Aaj Hi Website Order Karein - ₹5,099
                         </a>
                         
                         <p class="fomo-note">
-                            <i class="fas fa-exclamation-circle"></i> <span class="hinglish">Offer limited hai!</span> Free domain name ke saath. Pehle aao, pehle pao!
+                            <i class="fas fa-exclamation-circle"></i> <span class="hinglish">Offer limited hai!</span> Free domain name aur hosting ke saath. Pehle aao, pehle pao!
                         </p>
                     </div>
                 </div>
@@ -1935,6 +2068,7 @@
                         </div>
                         <h3>Starting from Moga</h3>
                         <p class="content-text">We began our journey in Moga, Punjab, to help local businesses grow with affordable digital marketing solutions. Our success in Moga has inspired us to expand across Punjab.</p>
+                                
                         <div class="cities-list">
                             <span class="city-tag">Moga</span>
                             <span class="city-tag">Ludhiana</span>
@@ -1949,6 +2083,7 @@
                         </div>
                         <h3>Expanding Across Punjab</h3>
                         <p class="content-text">While we started in Moga, our services are now available for businesses across <span class="punjab-highlight">all cities in Punjab</span>. Whether you're in a small town or a bigger city, we're here to help your business grow.</p>
+                                                                        
                         <div class="cities-list">
                             <span class="city-tag">Bathinda</span>
                             <span class="city-tag">Patiala</span>
@@ -1986,6 +2121,8 @@
                         <h3>No New Customers Mile?</h3>
                         <p class="content-text">Your business is running, but new customers nahi aa rahe? <span class="hinglish">Same old customers se kaam chal raha hai?</span> This limits your growth potential.</p>
                         
+                        <img src="https://media.istockphoto.com/id/1467976868/photo/the-convenience-of-shopping-online.jpg?s=612x612&w=0&k=20&c=klHJItA8JiXgaA6X2iMQ0yLQdg0q6EUE6-Keb-oOzzc=" alt="No customers problem" class="business-image">
+                        
                         <div class="solution-highlight">
                             <h4>MBA Solution:</h4>
                             <p class="content-text">We'll promote your business to <span class="hinglish">1200+ new potential customers</span> in Moga through our WhatsApp group. <span class="hinglish">Naye customers aayenge, business badhega!</span></p>
@@ -1999,9 +2136,11 @@
                         <h3>Marketing Budget Nahi Hai?</h3>
                         <p class="content-text">Big marketing agencies charge thousands of rupees. <span class="hinglish">Chhote business ke liye itna paisa kharcha karna mushkil hai.</span> But without marketing, growth stops.</p>
                         
+                        <img src="https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Budget problem" class="business-image">
+                        
                         <div class="solution-highlight">
                             <h4>MBA Solution:</h4>
-                            <p class="content-text">We provide <span class="hinglish">affordable marketing solutions</span> starting at just ₹99 for logo design and ₹249 for WhatsApp ads! <span class="hinglish">Kam budget mein bada marketing!</span> Get a professional website with free domain for only ₹5,099.</p>
+                            <p class="content-text">We provide <span class="hinglish">affordable marketing solutions</span> starting at just ₹99 for logo design and ₹249 for WhatsApp ads! <span class="hinglish">Kam budget mein bada marketing!</span> Get a professional website with free domain and hosting for only ₹5,099.</p>
                         </div>
                     </div>
                     
@@ -2012,9 +2151,11 @@
                         <h3>Online Presence Nahi Hai?</h3>
                         <p class="content-text">In today's digital world, <span class="hinglish">online nahi toh business piche reh jata hai.</span> Customers search online first before visiting any shop or service.</p>
                         
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="No online presence problem" class="business-image">
+                        
                         <div class="solution-highlight">
                             <h4>MBA Solution:</h4>
-                            <p class="content-text">We'll create your <span class="hinglish">professional website at 66% less cost</span> than market price with FREE domain name. <span class="hinglish">Online dikhao apna business!</span> Customers will find you easily.</p>
+                            <p class="content-text">We'll create your <span class="hinglish">professional website at 66% less cost</span> than market price with FREE domain and hosting. <span class="hinglish">Online dikhao apna business!</span> Customers will find you easily.</p>
                         </div>
                     </div>
                     
@@ -2024,6 +2165,8 @@
                         </div>
                         <h3>Business Growth Ruk Gaya?</h3>
                         <p class="content-text">Your business has reached a plateau? <span class="hinglish">Growth ruk gayi hai aur samajh nahi aa raha aage kaise badhayein?</span> This is a common challenge for local businesses.</p>
+                        
+                        <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Business growth stopped" class="business-image">
                         
                         <div class="solution-highlight">
                             <h4>MBA Solution:</h4>
@@ -2067,13 +2210,19 @@
                         <i class="fas fa-laptop-code"></i>
                     </div>
                     <h3>Professional Website</h3>
-                    <p class="content-text">Get a premium website for your business at 66% less than market price. <span class="hinglish">✅ FREE DOMAIN NAME INCLUDED!</span></p>
+                    <p class="content-text">Get a premium website for your business at 66% less than market price. <span class="hinglish">✅ FREE DOMAIN & HOSTING INCLUDED!</span></p>
                     <div class="price-comparison">
                         <span class="old-price">₹15,000</span>
                         <span class="new-price">₹5,099 Only</span>
                     </div>
                     <div class="savings">Save 66%</div>
-                    <a href="https://wa.me/916239648633?text=Hello%20MBA%20Team%2C%20I%20want%20to%20get%20a%20professional%20website%20for%20my%20business%20at%20%E2%82%B95%2C099%20with%20free%20domain%20name.%20Please%20guide%20me%20with%20the%20next%20steps." class="cta-button" target="_blank">Get Website</a>
+                    
+                    <div class="domain-hosting-badge" style="margin: 10px auto; padding: 6px 12px; font-size: 0.85rem;">
+                        <i class="fas fa-gift"></i>
+                        <span>Free Domain + Hosting</span>
+                    </div>
+                    
+                    <a href="https://wa.me/916239648633?text=Hello%20MBA%20Team%2C%20I%20want%20to%20get%20a%20professional%20website%20for%20my%20business%20at%20%E2%82%B95%2C099%20with%20free%20domain%20and%20hosting.%20Please%20guide%20me%20with%20the%20next%20steps." class="cta-button" target="_blank">Get Website</a>
                 </div>
                 
                 <div class="service-card">
@@ -2340,6 +2489,9 @@
                 <div class="contact-info">
                     <h3><span class="hinglish">Taiyar Hain Business Badhane Ke Liye?</span></h3>
                     <p class="content-text">Start promoting your business to 1200+ local customers today.</p>
+                    
+                    <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Business Consultation" class="business-image">
+                    
                     <a href="https://wa.me/916239648633?text=Hello%20and%20welcome%20to%20Moga%20Business%20Hub!%20%F0%9F%91%8B%F0%9F%92%BC%F0%9F%8C%9F%0AWe%E2%80%99re%20excited%20to%20have%20you%20here.%20%F0%9F%98%8A%F0%9F%8C%9F%0AWhether%20you%20want%20to%20promote%20your%20business%20in%20our%20marketing%20group%20%F0%9F%93%A2%F0%9F%92%AC%20or%20need%20a%20professional%20website%20to%20grow%20online%20%F0%9F%8C%90%F0%9F%9A%80%2C%20we%E2%80%99re%20here%20to%20support%20you%20every%20step%20of%20the%20way.%20%F0%9F%A4%9D%E2%9D%A4%0AShare%20your%20message%20anytime%20%E2%80%94%20we%E2%80%99ll%20respond%20shortly%20with%20the%20best%20guidance.%20%F0%9F%93%B2%F0%9F%98%8A%F0%9F%8C%9F" class="whatsapp-button" target="_blank" style="margin-top: 20px; display: inline-block;">
                         <i class="fab fa-whatsapp"></i> Message on WhatsApp
                     </a>
@@ -2355,7 +2507,7 @@
             <div class="footer-grid">
                 <div class="footer-col">
                     <h3>MBA - Moga Business AdHub</h3>
-                    <p class="content-text">Helping local businesses in Moga <span class="hinglish">tez growth karein</span> through affordable promotion and website services.</p>
+                    <p class="content-text">Helping local businesses in Moga <span class="hinglish">tez growth karein</span> through affordable promotion and website services with FREE domain and hosting.</p>
                     <div class="social-links">
                         <a href="https://wa.me/916239648633?text=Hello%20and%20welcome%20to%20Moga%20Business%20Hub!%20%F0%9F%91%8B%F0%9F%92%BC%F0%9F%8C%9F%0AWe%E2%80%99re%20excited%20to%20have%20you%20here.%20%F0%9F%98%8A%F0%9F%8C%9F%0AWhether%20you%20want%20to%20promote%20your%20business%20in%20our%20marketing%20group%20%F0%9F%93%A2%F0%9F%92%AC%20or%20need%20a%20professional%20website%20to%20grow%20online%20%F0%9F%8C%90%F0%9F%9A%80%2C%20we%E2%80%99re%20here%20to%20support%20you%20every%20step%20of%20the%20way.%20%F0%9F%A4%9D%E2%9D%A4%0AShare%20your%20message%20anytime%20%E2%80%94%20we%E2%80%99ll%20respond%20shortly%20with%20the%20best%20guidance.%20%F0%9F%93%B2%F0%9F%98%8A%F0%9F%8C%9F" target="_blank"><i class="fab fa-whatsapp"></i></a>
                         <a href="https://www.instagram.com/mogabusinessadhub6/" target="_blank"><i class="fab fa-instagram"></i></a>
@@ -2380,7 +2532,7 @@
                     <h3>Services</h3>
                     <ul class="footer-links">
                         <li><a href="#">WhatsApp Promotion - ₹249</a></li>
-                        <li><a href="#">Website + Free Domain - ₹5,099</a></li>
+                        <li><a href="#">Website + Free Domain & Hosting - ₹5,099</a></li>
                         <li><a href="#">Banner Design - Starting at ₹499</a></li>
                         <li><a href="#">Logo Design - ₹99 Only</a></li>
                         <li><a href="#">Creative Taglines - Starting at ₹199</a></li>
@@ -2393,12 +2545,13 @@
                         <li><i class="fas fa-phone"></i> 6239648633</li>
                         <li><i class="fab fa-whatsapp"></i> +91 6239648633</li>
                         <li><i class="fas fa-map-marker-alt"></i> Moga, Punjab</li>
+                        <li><i class="fas fa-globe"></i> Free Domain & Hosting Included</li>
                     </ul>
                 </div>
             </div>
             
             <div class="copyright">
-                <p class="content-text">&copy; 2023 Moga Business AdHub (MBA). All rights reserved.</p>
+                <p class="content-text">&copy; 2023 Moga Business AdHub (MBA). All rights reserved. | Website with FREE Domain & Hosting in just ₹5,099</p>
             </div>
         </div>
     </footer>
@@ -2469,7 +2622,7 @@
         }, observerOptions);
         
         // Observe elements for animation
-        document.querySelectorAll('.service-card, .step, .benefit-card, .business-card, .creative-card, .service-area-card, .fear-card, .fomo-card').forEach(el => {
+        document.querySelectorAll('.service-card, .step, .benefit-card, .business-card, .creative-card, .service-area-card, .fear-card, .fomo-card, .business-image, .hero-image-small').forEach(el => {
             el.style.opacity = '0';
             el.style.transform = 'translateY(20px)';
             el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
@@ -2499,6 +2652,12 @@
                 e.preventDefault();
                 return false;
             }
+        });
+        
+        // Add animation for domain-hosting-badge
+        const badges = document.querySelectorAll('.domain-hosting-badge');
+        badges.forEach(badge => {
+            badge.style.animation = 'pulse 2s infinite';
         });
     </script>
 </body>
